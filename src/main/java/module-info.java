@@ -13,4 +13,8 @@ module com.example.offcodercyberquest {
     exports com.example.offcodercyberquest;
     opens com.example.offcodercyberquest.Controller to javafx.fxml;
     exports com.example.offcodercyberquest.Controller;
+    exports com.example.offcodercyberquest.Beans;
+    opens com.example.offcodercyberquest.Beans to javafx.fxml;
+    exports com.example.offcodercyberquest.Scrapper;
+    opens com.example.offcodercyberquest.Scrapper to javafx.fxml;
 }

@@ -1,15 +1,12 @@
-package com.example.offcodercyberquest;
+package com.example.offcodercyberquest.Scrapper;
 
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlElement;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
+import com.example.offcodercyberquest.Beans.Problem;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.List;
 
 public class ProblemScrapper {
     private String question;

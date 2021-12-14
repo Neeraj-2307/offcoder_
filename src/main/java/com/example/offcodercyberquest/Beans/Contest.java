@@ -1,4 +1,4 @@
-package com.example.offcodercyberquest;
+package com.example.offcodercyberquest.Beans;
 
 import java.util.List;
 

@@ -1,21 +1,18 @@
 package com.example.offcodercyberquest.Controller;
 
-import com.example.offcodercyberquest.Contest;
-import com.example.offcodercyberquest.Result;
+import com.example.offcodercyberquest.Beans.Contest;
+import com.example.offcodercyberquest.Beans.Result;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import java.net.URI;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.*;
-import java.net.*;
+
 import org.json.*;
 public class ContestController implements Initializable {
     @FXML
