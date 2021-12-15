@@ -1,13 +1,17 @@
 package com.example.offcodercyberquest.Controller;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.Scrapper.ProblemScrapper;
 import com.example.offcodercyberquest.Beans.Suggestion;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -26,6 +30,11 @@ public class SuggestionController implements Initializable{
     private Button suggest;
     @FXML
     private ListView<Suggestion> suggestionList;
+    @FXML
+    void load_dashboard(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("dashboard.fxml");
+    }
     List<String> tag;
     String url = "https://codeforces.com/api/problemset.problems?";
     public void graphchange() {

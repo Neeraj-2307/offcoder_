@@ -2,12 +2,15 @@ package com.example.offcodercyberquest.Controller;
 
 import com.example.offcodercyberquest.Beans.Contest;
 import com.example.offcodercyberquest.Beans.Result;
+import com.example.offcodercyberquest.HelloApplication;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -15,6 +18,8 @@ import java.util.*;
 
 import org.json.*;
 public class ContestController implements Initializable {
+    @FXML
+    private Button dashboard;
     @FXML
     private ListView<Result> ContestList;
     @FXML
@@ -55,6 +60,10 @@ public class ContestController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
+    @FXML
+    void load_dashboard(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("dashboard.fxml");
+    }
 
 }

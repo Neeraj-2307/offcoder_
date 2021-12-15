@@ -18,9 +18,10 @@
       <Text fill="WHITE" layoutX="-20.0" layoutY="147.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Submissions pending " />
       <Text fill="WHITE" layoutX="-15.0" layoutY="307.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Downloads pending" />
       <Button fx:id="deleteButton" disable="true" layoutX="516.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#deleteFromList" style="-fx-background-color: #ff0000;" text="cancel" textFill="WHITE" />
-      <Label fx:id="DetailsLabel" alignment="CENTER" layoutX="46.0" layoutY="22.0" prefHeight="17.0" prefWidth="464.0" text="Select item from list to view details" textFill="WHITE">
+      <Label fx:id="DetailsLabel" alignment="CENTER" layoutX="52.0" layoutY="22.0" prefHeight="17.0" prefWidth="464.0" text="Select item from list to view details" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Label>
+      <Button layoutY="2.0" mnemonicParsing="false" onAction="#load_dashboard" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #f70909;" text="Go back to dashboard" textAlignment="CENTER" textFill="WHITE" />
    </children>
 </Pane>
