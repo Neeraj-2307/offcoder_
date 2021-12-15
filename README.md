@@ -1,6 +1,7 @@
-<center>
-![offcoder](offcoder.jpg)
-</center>
+<p align="center">
+  <img width="460" height="300" src="offcoder.jpg">
+</p>
+
 # Offcoder
 
 an alternative to an online coding platform, which will help those who don't have a good internet connection. A platform in which one can download
