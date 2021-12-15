@@ -7,7 +7,7 @@ module com.example.offcodercyberquest {
     requires  org.json;
     requires neko.htmlunit;
     requires org.apache.httpcomponents.httpclient;
-    requires  htmlunit;
+
     requires org.jsoup;
     requires java.logging;
     requires org.controlsfx.controls;
