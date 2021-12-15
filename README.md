@@ -63,7 +63,7 @@ manner whenever connected to the Internet.</li>
 </ul>
 
 
-### Project descriptors:
+## Project descriptors:
 *flow
 <img src="https://embed.creately.com/CyiN5sireEK?type=svg">
 Link: 
@@ -75,7 +75,12 @@ https://embed.creately.com/CyiN5sireEK?type=svg
 *brainstroming 
 https://lucid.app/lucidchart/9417a0ae-aa7c-4ce8-8b2c-55fb5dba155e/edit?invitationId=inv_22fb441b-1d2e-4aaf-9c27-07be9f3b0a42
 
+## screenshots
 
+  <p align="center">
+    <img width="460" height="300" src="1.jpeg">
+    <img width="460" height="300" src="2.jpeg">
+  </p>
 
 ## Authors
 
