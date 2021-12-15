@@ -45,11 +45,12 @@ manner whenever connected to the Internet.</li>
 
 <li>The platform can suggest questions similar to the current question.</li>
 </ol>
-Bonus Features:
-
-Ability to view and cancel Queued tasks.
-Default code.
-
+  
+  <p><h4 style="color:green">Bonus Features:&#127882;</h4></p>
+<ol>
+  <li>Ability to view and cancel Queued tasks.</li>
+<li>Default code.</li>
+  </ol>
 
 
 ### tech stack
