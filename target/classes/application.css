@@ -1,0 +1,131 @@
+/*property selector #############################################################*/
+
+.button:pressed{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.button:hover{
+    -fx-border-color: white;
+}
+
+
+
+
+
+/*id selectors ##################################################################3*/
+#submitButton{
+    -fx-background-color: green;
+}
+#runAllButton{
+    -fx-background-color:#4d7ad9;
+}
+#compileButton{
+    -fx-background-color: #4d7ad9;
+}
+#runButton{
+    -fx-background-color: #4d7ad9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*............#########################################################........................*/
+
+.button{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 );
+}
+.choice-box{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+.tool-bar{
+    /*-fx-background-color: radial-gradient(radius 100%, derive(-fx-base,20%), derive(-fx-base,-20%));*/
+    -fx-background-color: #212121;
+    -fx-padding: 5;
+}
+ButtonBar{
+    -fx-padding: 10;
+    -fx-background-color: #212121;
+}
+.label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.text-area{
+    /*-fx-text-fill: white;*/
+    -fx-border-color: transparent;
+    -fx-control-inner-background: #363636;
+    -fx-font-size: 14pt;
+    -fx-text-fill: green ;
+    /*-fx-padding: 0;*/
+}
+.text-area:focused{
+ /*-fx-highlight-fill:black;*/
+    -fx-border-color: white;
+}
+
+TextFlow {
+    -fx-background-color: #363636;
+    -fx-text-fill: white;
+}
+
+Text {
+    -fx-fill: white;
+    -fx-font-size: 12pt;
+}
+
+.scroll-bar{
+    -fx-border-color: white;
+    -fx-background-color: #363636;
+}
+.thumb{
+    -fx-background-color: #212121;
+}
+
+VBox{
+    /*-fx-border-color: red;*/
+    -fx-background-color: #363636;
+}
+.split-pane:vertical > .split-pane-divider {
+    /*-fx-border-color: red;*/
+    -fx-background-color: black;
+    -fx-padding: 1;
+}
+.split-pane:horizontal > .split-pane-divider {
+    /*-fx-border-color: red;*/
+    -fx-background-color: black;
+    -fx-padding: 1;
+}
+
+.titled-pane > .title > .text {
+    -fx-fill: WHITE;
+}
+.titled-pane > .title > {
+    -fx-background-color: #212121;
+}
+
+ImageView {
+
+}
+
+/*Background color of the whole context menu*/
+.choice-box .context-menu { -fx-background-color: black; -fx-fit-to-width: true }
+/*Focused item background color in the list*/
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+/*Text color of non-focused items in the list*/
+.choice-box .menu-item > .label { -fx-text-fill: white; }
+/*Text color of focused item in the list*/
+.choice-box .menu-item:focused > .label { -fx-text-fill: black; }
