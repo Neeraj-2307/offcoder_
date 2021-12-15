@@ -49,13 +49,14 @@ public class QuestionController implements Initializable {
     }
     public void showList(){
         questionList.getItems().clear();
-        showList.setDisable(false);
+        showList.setVisible(false);
         for(int i=0;i<dp.size();i++){
             questionList.getItems().add(list1.get(dp.get(i)));
         }
 
     }
     public void showHistory(){
+        showList.setVisible(false);
         questionList.getItems().clear();
         for(int i=0;i<his.size();i++){
             questionList.getItems().add(list1.get(his.get(i)));
@@ -73,6 +74,7 @@ public class QuestionController implements Initializable {
     }
     public void showAll(){
         questionList.getItems().clear();
+        showList.setVisible(false);
         for(String s:list1){
             questionList.getItems().add(s);
         }
