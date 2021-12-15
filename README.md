@@ -1,3 +1,5 @@
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scrolldroll.com%2Fkota-factory-meme-templates%2F&psig=AOvVaw3-7ert_kSNAL-Qh6xBSxsf&ust=1639664984662000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDK5Z6C5vQCFQAAAAAdAAAAABAD" alt="offcoder image" >
+
 # Offcoder
 
 an alternative to an online coding platform, which will help those who don't have a good internet connection. A platform in which one can download
@@ -24,23 +26,23 @@ for scraping as well as APIs.)
 
 
 </ol>
-Advanced:-
+<h4><b>Advanced:-</h4>
+<ol>
+<li>The external libraries used in the previous section should be replaced
+with your own scraper algorithm.</li>
 
-1.The external libraries used in the previous section should be replaced
-with your own scraper algorithm.
+<li>Users must get their projected new rating and rank for the offline
+contest based on the concerned platform’s rating mechanism.</li>
 
-2.Users must get their projected new rating and rank for the offline
-contest based on the concerned platform’s rating mechanism.
+<li>The platform should have an elegant dashboard for statistics of user’s
+performance through graphs, pie charts, etc.</li>
 
-3.The platform should have an elegant dashboard for statistics of user’s
-performance through graphs, pie charts, etc.
-
-4.The platform should have an automatic download feature for favorite
+<li>The platform should have an automatic download feature for favorite
 topics selected previously. The download should happen in a periodic
-manner whenever connected to the Internet.
+manner whenever connected to the Internet.</li>
 
-5.The platform can suggest questions similar to the current question.
-
+<li>The platform can suggest questions similar to the current question.</li>
+</ol>
 Bonus Features:
 
 Ability to view and cancel Queued tasks.
@@ -49,13 +51,13 @@ Default code.
 
 
 ### tech stack
+<ul>
 
-Tech Stack :-
-*Front End:- JavaFX
-*Backend :- JAVA
-*Libraries going to use:-  .Jsoup, Jackson
-*Tools used:-  IntelliJ, GitHub, SceneBuilder, maven
-
+ <li>Front End:- JavaFX</li>
+<li>Backend :- JAVA</li>
+<li>Libraries going to use:-  .Jsoup, Jackson</li>
+<li>Tools used:-  IntelliJ, GitHub, SceneBuilder, maven</li>
+</ul>
 
 
 ### Project descriptors:
