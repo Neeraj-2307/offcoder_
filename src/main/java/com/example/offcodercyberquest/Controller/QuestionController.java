@@ -1,10 +1,13 @@
 package com.example.offcodercyberquest.Controller;
 
+import com.example.offcodercyberquest.HelloApplication;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +21,11 @@ public class QuestionController implements Initializable {
     private Label QuestionDetail;
     @FXML
     private ListView<String> questionList;
+    @FXML
+    void load_dashboard(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("dashboard.fxml");
+    }
     List<String> list1= new ArrayList<String>();
     List<String> fav= new ArrayList<>();
     List<Integer> his=new ArrayList<Integer>();

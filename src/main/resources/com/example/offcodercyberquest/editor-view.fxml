@@ -110,6 +110,7 @@
                         </ChoiceBox>
                         <Button fx:id="compileButton" mnemonicParsing="false" onAction="#onCompile" text="Compile" />
                   <Button fx:id="runButton" mnemonicParsing="false" onAction="#onRun" text="RUN" />
+                  <Button alignment="CENTER" minWidth="46.0" mnemonicParsing="false" onAction="#load_dashboard" prefHeight="26.0" style="-fx-background-color: #f70404;" text="DashBoard" textFill="#f70404" />
                     </buttons>
                 </ButtonBar>
                 <TextArea fx:id="codeArea" prefHeight="200.0" prefWidth="200.0" text="class Codeforce{&#10;    public static void main(String[] args) {&#10;        System.out.println(&quot;HELLO WORLD&quot;);&#10;    }&#10;}" VBox.vgrow="ALWAYS" />

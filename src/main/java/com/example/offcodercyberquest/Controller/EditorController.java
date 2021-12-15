@@ -3,6 +3,7 @@ package com.example.offcodercyberquest.Controller;
 import com.example.offcodercyberquest.Beans.Code;
 import com.example.offcodercyberquest.Beans.Language;
 import com.example.offcodercyberquest.Beans.TestCase;
+import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.environments.*;
 import com.example.offcodercyberquest.utils.CodeFileHandler;
 import javafx.collections.FXCollections;
@@ -26,6 +27,11 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class EditorController implements Initializable {
+    @FXML
+    void load_dashboard(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("dashboard.fxml");
+    }
     @FXML
     private TextArea codeArea, outputArea, customInputArea;
     @FXML

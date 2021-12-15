@@ -1,13 +1,16 @@
 package com.example.offcodercyberquest.Controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.PriorityQueue;
 import java.util.ResourceBundle;
 
+import com.example.offcodercyberquest.HelloApplication;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -65,7 +68,11 @@ public class listcontroller implements Initializable {
 		DownP.getItems().remove(deleteI);
 		
 	}
-
+	@FXML
+	void load_dashboard(ActionEvent event) throws IOException {
+		HelloApplication m = new HelloApplication();
+		m.changeScene("dashboard.fxml");
+	}
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub

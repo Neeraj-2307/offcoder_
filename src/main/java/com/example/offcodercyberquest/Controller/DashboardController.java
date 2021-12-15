@@ -38,8 +38,9 @@ public class DashboardController {
     private Parent root;
 
     @FXML
-    void load_contest(ActionEvent event) {
-
+    void load_contest(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("Contest.fxml");
     }
 
     @FXML
@@ -48,8 +49,9 @@ public class DashboardController {
     }
 
     @FXML
-    void load_ide(ActionEvent event) {
-
+    void load_ide(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("editior-view.fxml");
     }
 
     @FXML
@@ -65,8 +67,9 @@ public class DashboardController {
     }
 
     @FXML
-    void load_queue(ActionEvent event) {
-
+    void load_queue(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("DisplayQueue.fxml");
     }
 
     @FXML

@@ -15,8 +15,9 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="all" layoutX="376.0" layoutY="31.0" mnemonicParsing="false" onAction="#showAll" prefHeight="54.0" prefWidth="130.0" text="All Questions" />
+      <Button fx:id="all" layoutX="374.0" layoutY="80.0" mnemonicParsing="false" onAction="#showAll" prefHeight="54.0" prefWidth="130.0" text="All Questions" />
       <Button fx:id="favList" layoutX="68.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFavList" prefHeight="44.0" prefWidth="286.0" text="Fav lists" />
       <Button fx:id="showList" layoutX="746.0" layoutY="163.0" mnemonicParsing="false" onAction="#showList" text="Show list" visible="false" />
+      <Button layoutX="387.0" layoutY="45.0" mnemonicParsing="false" onAction="#load_dashboard" style="-fx-background-color: #f70909;" text="go to dashboard" textFill="WHITE" />
    </children>
 </AnchorPane>
