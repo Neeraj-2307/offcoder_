@@ -74,5 +74,6 @@ https://lucid.app/lucidchart/9417a0ae-aa7c-4ce8-8b2c-55fb5dba155e/edit?invitatio
 
 ## Authors
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+[@mokshKori](https://github.com/mokshkori)
+[@neerajJoshi](https://github.com/neeraj_2307)
+[@AnubhavGoel](https://github.com/AnubhavGoel2808)
