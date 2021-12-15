@@ -9,6 +9,7 @@ module com.example.offcodercyberquest {
     requires org.apache.httpcomponents.httpclient;
     requires  htmlunit;
     requires org.jsoup;
+    requires java.logging;
     opens com.example.offcodercyberquest to javafx.fxml;
     exports com.example.offcodercyberquest;
     opens com.example.offcodercyberquest.Controller to javafx.fxml;
