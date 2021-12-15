@@ -74,6 +74,6 @@ https://lucid.app/lucidchart/9417a0ae-aa7c-4ce8-8b2c-55fb5dba155e/edit?invitatio
 
 ## Authors
 
-[@mokshKori](https://github.com/mokshkori)
-[@neerajJoshi](https://github.com/neeraj_2307)
+[@mokshKori](https://github.com/mokshkori)<br>
+[@neerajJoshi](https://github.com/neeraj_2307)<br>
 [@AnubhavGoel](https://github.com/AnubhavGoel2808)
