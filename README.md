@@ -1,4 +1,4 @@
-![offcoder](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scrolldroll.com%2Fkota-factory-meme-templates%2F&psig=AOvVaw3-7ert_kSNAL-Qh6xBSxsf&ust=1639664984662000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDK5Z6C5vQCFQAAAAAdAAAAABAD)
+![offcoder](offcoder.jpg)
 
 # Offcoder
 
