@@ -3,7 +3,6 @@ package com.example.offcodercyberquest.queue;
 
 // TaskManager is responsible to pull task from the TaskQueue
 // and calls perform on it.
-
 public class TaskManager extends Thread{
     TaskQueue queue;
     public TaskManager(){
