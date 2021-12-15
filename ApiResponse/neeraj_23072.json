@@ -1,0 +1,377 @@
+[ {
+  "contestId" : 1385,
+  "contestName" : "Codeforces Round #656 (Div. 3)",
+  "handle" : "neeraj_2307",
+  "rank" : 11873,
+  "ratingUpdateTimeSeconds" : 1595004600,
+  "oldRating" : 0,
+  "newRating" : 394
+}, {
+  "contestId" : 1382,
+  "contestName" : "Codeforces Round #658 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 11849,
+  "ratingUpdateTimeSeconds" : 1595349300,
+  "oldRating" : 394,
+  "newRating" : 649
+}, {
+  "contestId" : 1389,
+  "contestName" : "Educational Codeforces Round 92 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 9204,
+  "ratingUpdateTimeSeconds" : 1596040500,
+  "oldRating" : 649,
+  "newRating" : 870
+}, {
+  "contestId" : 1388,
+  "contestName" : "Codeforces Round #660 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 5278,
+  "ratingUpdateTimeSeconds" : 1596126900,
+  "oldRating" : 870,
+  "newRating" : 1076
+}, {
+  "contestId" : 1399,
+  "contestName" : "Codeforces Round #661 (Div. 3)",
+  "handle" : "neeraj_2307",
+  "rank" : 13517,
+  "ratingUpdateTimeSeconds" : 1596646200,
+  "oldRating" : 1076,
+  "newRating" : 1080
+}, {
+  "contestId" : 1393,
+  "contestName" : "Codeforces Round #662 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 9283,
+  "ratingUpdateTimeSeconds" : 1596818100,
+  "oldRating" : 1080,
+  "newRating" : 1102
+}, {
+  "contestId" : 1447,
+  "contestName" : "Codeforces Round #683 (Div. 2, by Meet IT)",
+  "handle" : "neeraj_2307",
+  "rank" : 4512,
+  "ratingUpdateTimeSeconds" : 1605459900,
+  "oldRating" : 1102,
+  "newRating" : 1079
+}, {
+  "contestId" : 1440,
+  "contestName" : "Codeforces Round #684 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 8248,
+  "ratingUpdateTimeSeconds" : 1605631800,
+  "oldRating" : 1079,
+  "newRating" : 1013
+}, {
+  "contestId" : 1452,
+  "contestName" : "Educational Codeforces Round 98 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 8076,
+  "ratingUpdateTimeSeconds" : 1605803700,
+  "oldRating" : 1013,
+  "newRating" : 975
+}, {
+  "contestId" : 1451,
+  "contestName" : "Codeforces Round #685 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 5682,
+  "ratingUpdateTimeSeconds" : 1605977400,
+  "oldRating" : 975,
+  "newRating" : 1046
+}, {
+  "contestId" : 1454,
+  "contestName" : "Codeforces Round #686 (Div. 3)",
+  "handle" : "neeraj_2307",
+  "rank" : 6742,
+  "ratingUpdateTimeSeconds" : 1606235700,
+  "oldRating" : 1046,
+  "newRating" : 1050
+}, {
+  "contestId" : 1457,
+  "contestName" : "Codeforces Round #687 (Div. 2, based on Technocup 2021 Elimination Round 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 4389,
+  "ratingUpdateTimeSeconds" : 1606640700,
+  "oldRating" : 1050,
+  "newRating" : 1033
+}, {
+  "contestId" : 1455,
+  "contestName" : "Educational Codeforces Round 99 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 7822,
+  "ratingUpdateTimeSeconds" : 1606754100,
+  "oldRating" : 1033,
+  "newRating" : 1019
+}, {
+  "contestId" : 1453,
+  "contestName" : "Codeforces Round #688 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 4761,
+  "ratingUpdateTimeSeconds" : 1607095200,
+  "oldRating" : 1019,
+  "newRating" : 1069
+}, {
+  "contestId" : 1450,
+  "contestName" : "Codeforces Global Round 12",
+  "handle" : "neeraj_2307",
+  "rank" : 9287,
+  "ratingUpdateTimeSeconds" : 1607276100,
+  "oldRating" : 1069,
+  "newRating" : 958
+}, {
+  "contestId" : 1461,
+  "contestName" : "Codeforces Round #689 (Div. 2, based on Zed Code Competition)",
+  "handle" : "neeraj_2307",
+  "rank" : 5115,
+  "ratingUpdateTimeSeconds" : 1607704500,
+  "oldRating" : 958,
+  "newRating" : 1008
+}, {
+  "contestId" : 1462,
+  "contestName" : "Codeforces Round #690 (Div. 3)",
+  "handle" : "neeraj_2307",
+  "rank" : 4782,
+  "ratingUpdateTimeSeconds" : 1608050100,
+  "oldRating" : 1008,
+  "newRating" : 1057
+}, {
+  "contestId" : 1463,
+  "contestName" : "Educational Codeforces Round 100 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 7391,
+  "ratingUpdateTimeSeconds" : 1608222900,
+  "oldRating" : 1057,
+  "newRating" : 961
+}, {
+  "contestId" : 1469,
+  "contestName" : "Educational Codeforces Round 101 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 7860,
+  "ratingUpdateTimeSeconds" : 1609173300,
+  "oldRating" : 961,
+  "newRating" : 992
+}, {
+  "contestId" : 1466,
+  "contestName" : "Good Bye 2020",
+  "handle" : "neeraj_2307",
+  "rank" : 6560,
+  "ratingUpdateTimeSeconds" : 1609349700,
+  "oldRating" : 992,
+  "newRating" : 1080
+}, {
+  "contestId" : 1471,
+  "contestName" : "Codeforces Round #694 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 9244,
+  "ratingUpdateTimeSeconds" : 1609864500,
+  "oldRating" : 1080,
+  "newRating" : 1056
+}, {
+  "contestId" : 1467,
+  "contestName" : "Codeforces Round #695 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 10217,
+  "ratingUpdateTimeSeconds" : 1610123700,
+  "oldRating" : 1056,
+  "newRating" : 950
+}, {
+  "contestId" : 1473,
+  "contestName" : "Educational Codeforces Round 102 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 7332,
+  "ratingUpdateTimeSeconds" : 1610642100,
+  "oldRating" : 950,
+  "newRating" : 1004
+}, {
+  "contestId" : 1474,
+  "contestName" : "Codeforces Round #696 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 6064,
+  "ratingUpdateTimeSeconds" : 1611074100,
+  "oldRating" : 1004,
+  "newRating" : 1071
+}, {
+  "contestId" : 1480,
+  "contestName" : "Codeforces Round #700 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 6949,
+  "ratingUpdateTimeSeconds" : 1612716600,
+  "oldRating" : 1071,
+  "newRating" : 1101
+}, {
+  "contestId" : 1485,
+  "contestName" : "Codeforces Round #701 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 6895,
+  "ratingUpdateTimeSeconds" : 1613148600,
+  "oldRating" : 1101,
+  "newRating" : 999
+}, {
+  "contestId" : 1486,
+  "contestName" : "Codeforces Round #703 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 6633,
+  "ratingUpdateTimeSeconds" : 1613667000,
+  "oldRating" : 999,
+  "newRating" : 1056
+}, {
+  "contestId" : 1494,
+  "contestName" : "Educational Codeforces Round 105 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 7459,
+  "ratingUpdateTimeSeconds" : 1614703500,
+  "oldRating" : 1056,
+  "newRating" : 1054
+}, {
+  "contestId" : 1496,
+  "contestName" : "Codeforces Round #706 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 2849,
+  "ratingUpdateTimeSeconds" : 1615385100,
+  "oldRating" : 1054,
+  "newRating" : 1168
+}, {
+  "contestId" : 1499,
+  "contestName" : "Educational Codeforces Round 106 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 3658,
+  "ratingUpdateTimeSeconds" : 1616086200,
+  "oldRating" : 1168,
+  "newRating" : 1222
+}, {
+  "contestId" : 1517,
+  "contestName" : "Contest 2050 and Codeforces Round #718 (Div. 1 + Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 8445,
+  "ratingUpdateTimeSeconds" : 1619198400,
+  "oldRating" : 1222,
+  "newRating" : 1160
+}, {
+  "contestId" : 1515,
+  "contestName" : "Codeforces Global Round 14",
+  "handle" : "neeraj_2307",
+  "rank" : 4897,
+  "ratingUpdateTimeSeconds" : 1619976900,
+  "oldRating" : 1160,
+  "newRating" : 1212
+}, {
+  "contestId" : 1520,
+  "contestName" : "Codeforces Round #719 (Div. 3)",
+  "handle" : "neeraj_2307",
+  "rank" : 1291,
+  "ratingUpdateTimeSeconds" : 1620232500,
+  "oldRating" : 1212,
+  "newRating" : 1325
+}, {
+  "contestId" : 1529,
+  "contestName" : "Codeforces Round #722 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 8289,
+  "ratingUpdateTimeSeconds" : 1621875000,
+  "oldRating" : 1325,
+  "newRating" : 1266
+}, {
+  "contestId" : 1523,
+  "contestName" : "Deltix Round, Spring 2021 (open for everyone, rated, Div. 1 + Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 3391,
+  "ratingUpdateTimeSeconds" : 1622393400,
+  "oldRating" : 1266,
+  "newRating" : 1321
+}, {
+  "contestId" : 1535,
+  "contestName" : "Educational Codeforces Round 110 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 6206,
+  "ratingUpdateTimeSeconds" : 1622824500,
+  "oldRating" : 1321,
+  "newRating" : 1300
+}, {
+  "contestId" : 1557,
+  "contestName" : "Codeforces Round #737 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 11332,
+  "ratingUpdateTimeSeconds" : 1628526900,
+  "oldRating" : 1300,
+  "newRating" : 1204
+}, {
+  "contestId" : 1559,
+  "contestName" : "Codeforces Round #738 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 5034,
+  "ratingUpdateTimeSeconds" : 1629046200,
+  "oldRating" : 1204,
+  "newRating" : 1231
+}, {
+  "contestId" : 1560,
+  "contestName" : "Codeforces Round #739 (Div. 3)",
+  "handle" : "neeraj_2307",
+  "rank" : 4671,
+  "ratingUpdateTimeSeconds" : 1629305400,
+  "oldRating" : 1231,
+  "newRating" : 1235
+}, {
+  "contestId" : 1561,
+  "contestName" : "Codeforces Round #740 (Div. 2, based on VK Cup 2021 - Final (Engine))",
+  "handle" : "neeraj_2307",
+  "rank" : 4127,
+  "ratingUpdateTimeSeconds" : 1629824700,
+  "oldRating" : 1235,
+  "newRating" : 1252
+}, {
+  "contestId" : 1607,
+  "contestName" : "Codeforces Round #753 (Div. 3)",
+  "handle" : "neeraj_2307",
+  "rank" : 3592,
+  "ratingUpdateTimeSeconds" : 1635870900,
+  "oldRating" : 1252,
+  "newRating" : 1257
+}, {
+  "contestId" : 1605,
+  "contestName" : "Codeforces Round #754 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 3258,
+  "ratingUpdateTimeSeconds" : 1636734900,
+  "oldRating" : 1257,
+  "newRating" : 1290
+}, {
+  "contestId" : 1589,
+  "contestName" : "Codeforces Round #755 (Div. 2, based on Technocup 2022 Elimination Round 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 3727,
+  "ratingUpdateTimeSeconds" : 1636878000,
+  "oldRating" : 1290,
+  "newRating" : 1217
+}, {
+  "contestId" : 1610,
+  "contestName" : "Codeforces Global Round 17",
+  "handle" : "neeraj_2307",
+  "rank" : 4603,
+  "ratingUpdateTimeSeconds" : 1637688900,
+  "oldRating" : 1217,
+  "newRating" : 1225
+}, {
+  "contestId" : 1614,
+  "contestName" : "Codeforces Round #757 (Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 3260,
+  "ratingUpdateTimeSeconds" : 1637932500,
+  "oldRating" : 1225,
+  "newRating" : 1259
+}, {
+  "contestId" : 1613,
+  "contestName" : "Educational Codeforces Round 118 (Rated for Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 1657,
+  "ratingUpdateTimeSeconds" : 1638376500,
+  "oldRating" : 1259,
+  "newRating" : 1363
+}, {
+  "contestId" : 1608,
+  "contestName" : "Codeforces Round #758 (Div.1 + Div. 2)",
+  "handle" : "neeraj_2307",
+  "rank" : 1541,
+  "ratingUpdateTimeSeconds" : 1639224300,
+  "oldRating" : 1363,
+  "newRating" : 1451
+} ]

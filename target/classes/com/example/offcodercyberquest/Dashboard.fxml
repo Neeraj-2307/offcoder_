@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="687.0" style="-fx-background-color: #15202B;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.offcodercyberquest.Controller.DashboardController">
+    <top>
+        <Label text="OFFCODER" textFill="WHITE" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="60.0" />
+            </font>
+        </Label>
+    </top>
+    <left>
+        <VBox prefHeight="373.0" prefWidth="169.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="history_button" mnemonicParsing="false" onAction="#load_history" prefHeight="120.0" prefWidth="167.0" style="-fx-background-color: #8899A6; -fx-background-radius: 15px;" text="History" textFill="#192734">
+                    <VBox.margin>
+                        <Insets left="10.0" right="13.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="stats_button" mnemonicParsing="false" onAction="#load_stats" prefHeight="120.0" prefWidth="167.0" style="-fx-background-color: #8899A6; -fx-background-radius: 15px;" text="Stats" textFill="#192734">
+                    <VBox.margin>
+                        <Insets left="10.0" right="13.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets top="40.0" />
+            </padding>
+        </VBox>
+    </left>
+    <center>
+        <HBox prefHeight="373.0" prefWidth="359.0" spacing="11.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="question_button" mnemonicParsing="false" onAction="#load_question" prefHeight="217.0" prefWidth="170.0" style="-fx-background-color: #8899A6; -fx-background-radius: 15px;" text="Practice" textAlignment="JUSTIFY" textFill="#192734">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font></Button>
+                <Button fx:id="random_button" mnemonicParsing="false" onAction="#load_ide" prefHeight="218.0" prefWidth="157.0" style="-fx-background-color: #8899A6; -fx-background-radius: 15px;" text="Random Question" textFill="#192734">
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets top="52.0" />
+            </padding>
+        </HBox>
+    </center>
+    <right>
+        <VBox prefHeight="373.0" prefWidth="167.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="contest_button" mnemonicParsing="false" onAction="#load_contest" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: #8899A6; -fx-background-radius: 15px;" text="Contest" textFill="#192734">
+                    <VBox.margin>
+                        <Insets left="10.0" top="35.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Button>
+                <Button fx:id="queue_button" mnemonicParsing="false" onAction="#load_queue" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: #8899A6; -fx-background-radius: 15px;" text="Queue" textFill="#192734">
+                    <VBox.margin>
+                        <Insets left="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </right>
+    <bottom>
+        <Button fx:id="logout_button" mnemonicParsing="false" onAction="#load_login" style="-fx-background-color: #8899A6; -fx-background-radius: 15px;" text="Log Out" textFill="#192734" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="10.0" />
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+</BorderPane>

@@ -17,4 +17,5 @@ module com.example.offcodercyberquest {
     opens com.example.offcodercyberquest.Beans to javafx.fxml;
     exports com.example.offcodercyberquest.Scrapper;
     opens com.example.offcodercyberquest.Scrapper to javafx.fxml;
+
 }

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.offcodercyberquest.Controller.StatsController">
+    <left>
+        <VBox prefHeight="600.0" prefWidth="370.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="handle" text="Handle">
+                    <VBox.margin>
+                        <Insets left="130.0" top="-26.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="avatar" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                    <VBox.margin>
+                        <Insets left="90.0" />
+                    </VBox.margin></ImageView>
+                <PieChart fx:id="piechart" prefHeight="287.0" prefWidth="370.0" title="Verdict" />
+                <Button fx:id="dashboard_button" mnemonicParsing="false" onAction="#load_dashboard" text="Dashboard" textAlignment="CENTER">
+                    <VBox.margin>
+                        <Insets left="130.0" top="40.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets top="100.0" />
+            </padding>
+        </VBox>
+    </left>
+    <center>
+        <VBox prefHeight="600.0" prefWidth="436.0" BorderPane.alignment="CENTER">
+            <children>
+                <LineChart fx:id="rating" title="Rating">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis side="LEFT" />
+                    </yAxis>
+                </LineChart>
+                <BarChart fx:id="solved" prefHeight="249.0" prefWidth="412.0" title="Solved">
+                    <xAxis>
+                        <CategoryAxis label="Difficulty" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Number" side="LEFT" />
+                    </yAxis>
+                </BarChart>
+            </children>
+        </VBox>
+    </center>
+    <right>
+        <VBox prefHeight="600.0" prefWidth="242.0" BorderPane.alignment="CENTER">
+            <children>
+                <ListView fx:id="history" prefHeight="337.0" prefWidth="242.0" />
+                <Label text="History">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="99.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox prefHeight="22.0" prefWidth="242.0" spacing="100.0">
+                    <children>
+                        <Label text="Current Rating">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="currentRating" alignment="CENTER" text="1200">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="22.0" prefWidth="242.0" spacing="123.0">
+                    <children>
+                        <Label text="Max Rating">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="maxRating" alignment="CENTER" text="1200">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="22.0" prefWidth="242.0" spacing="110.0">
+                    <children>
+                        <Label text="Total Contest">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="totalContest" alignment="CENTER" text="1200">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="22.0" prefWidth="242.0" spacing="60.0">
+                    <children>
+                        <Label text="Max Rating Increase">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="ratingIncrease" alignment="CENTER" text="1200">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="22.0" prefWidth="242.0" spacing="55.0">
+                    <children>
+                        <Label text="Max Rating Decrease">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="ratingDecrease" alignment="CENTER" text="1200">
+                            <font>
+                                <Font name="System Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Label text="Statistics">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="99.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+    </right>
+</BorderPane>
