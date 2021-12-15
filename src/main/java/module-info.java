@@ -10,6 +10,7 @@ module com.example.offcodercyberquest {
     requires  htmlunit;
     requires org.jsoup;
     requires java.logging;
+    requires org.controlsfx.controls;
     opens com.example.offcodercyberquest to javafx.fxml;
     exports com.example.offcodercyberquest;
     opens com.example.offcodercyberquest.Controller to javafx.fxml;
