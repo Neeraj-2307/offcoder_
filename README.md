@@ -5,25 +5,25 @@ questions, set up contests, submit answers and later on when connected to the in
 
 ## Features
 
-Basic:-
+<h4><b>Basic:-<b></h4>
 
-
-1.Users should be able to pick questions randomly as well as specifically
+<ol>
+<li>Users should be able to pick questions randomly as well as specifically
 from any one platform (codeforces, leetcode, etc) and be able to
 download it with its sample test case. (external libraries may be used
 for scraping as well as APIs.)
+ </li>
+<li>Users can schedule a contest with a chosen problem or randomly selected problem.
+ </li>
+ <li>Users should be able to submit the code in various languages.</li>
+<li>The platform should be able to compile the code and display the verdict against the sample test case.</li>
+<li>When the user is connected to the internet the platform on its own should be able to submit the user code and give the user a final verdict on its submission.</li>
+<li>Users should be able to make personalized lists for various questions that they have solved with solutions</li>
+<li> If an editorial is published it should be available to the user.</li>
+<li> The platform should have a history of submitted questions.</li>
 
-2.Users can schedule a contest with a chosen problem or randomly selected problem.
 
-3.Users should be able to submit the code in various languages.
-4.The platform should be able to compile the code and display the verdict against the sample test case.
-5.When the user is connected to the internet the platform on its own should be able to submit the user code and give the user a final verdict on its submission.
-6.Users should be able to make personalized lists for various questions that they have solved with solutions
-7. If an editorial is published it should be available to the user.
-8. The platform should have a history of submitted questions.
-
-
-
+</ol>
 Advanced:-
 
 1.The external libraries used in the previous section should be replaced
