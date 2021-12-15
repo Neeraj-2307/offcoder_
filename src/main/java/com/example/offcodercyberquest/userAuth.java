@@ -63,7 +63,7 @@ public class userAuth {
     public void serializeUser() throws IOException {
 
         User user =User.getInstance();
-        String filename = "offcoder_/UserFiles/"+user.handle+".txt";
+        String filename = "./UserFiles/"+user.handle+".txt";
         FileOutputStream fout=new FileOutputStream(filename);
         ObjectOutputStream out=new ObjectOutputStream(fout);
         out.writeObject(user);
@@ -77,7 +77,7 @@ public class userAuth {
 
         //CHECKING IF THE FILE EXISTS OR NOT
 
-        String filename = "offcoder_/UserFiles/"+user_name+".txt";
+        String filename = "./UserFiles/"+user_name+".txt";
         File f = new File(filename);
         if(!f.isFile()) {
             return -1;
