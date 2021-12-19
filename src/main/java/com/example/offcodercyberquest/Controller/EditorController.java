@@ -5,6 +5,9 @@ import com.example.offcodercyberquest.Beans.Language;
 import com.example.offcodercyberquest.Beans.TestCase;
 import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.environments.*;
+import com.example.offcodercyberquest.queue.DownloadTask;
+import com.example.offcodercyberquest.queue.SubmitTask;
+import com.example.offcodercyberquest.queue.TaskQueue;
 import com.example.offcodercyberquest.utils.CodeFileHandler;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -95,6 +98,7 @@ public class EditorController implements Initializable {
 
     public void onSubmit(ActionEvent e) {
         //TODO submit util
+        TaskQueue.getInstance().addTask(new SubmitTask());
     }
 
     private void setDefaultCode() {

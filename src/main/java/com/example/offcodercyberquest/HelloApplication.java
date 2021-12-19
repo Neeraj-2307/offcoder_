@@ -1,5 +1,6 @@
 package com.example.offcodercyberquest;
 
+import com.example.offcodercyberquest.queue.TaskManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,6 +21,10 @@ public class HelloApplication extends Application {
             stage.setScene(scene);
             stage.show();
 
+            // task manager thread
+            TaskManager manager = new TaskManager();
+            manager.setName("TASK MANAGER THREAD");
+            manager.start();
 
         } catch(Exception e) {
             e.printStackTrace();

@@ -29,8 +29,14 @@ public class userAuth {
         if(!(matcher.matches()))
             return -1;
 
-
+        //CHECKING FOR CORRECT PASSWORD
+        Automation automation = new Automation();
+        int r = automation.login(user_name,user_password);
+        if(r == -1)
+            return -1;
+//        System.out.println(automation.getCSRF());
         //API CALL FOR USER INFO
+
         String url = "https://codeforces.com/api/user.info?handles=";
         url = url+user_name;
         HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create(url)).build();
@@ -44,13 +50,12 @@ public class userAuth {
         String status =(String)node.get("status").asText();
 
         //RETURN IF USER DOSEN'T EXIST ON CODEFORCES
-
         if(status.equals("FAILED"))
             return -1;
         JsonNode result = node.get("result");
 
 
-        // USER CLASS CALL FOR INITIALIZATION
+//      USER CLASS CALL FOR INITIALIZATION
         User user = User.getInstance();
         user.setInstance(result,user_password,user_email);
         userStats stat = new userStats();
@@ -63,7 +68,7 @@ public class userAuth {
     public void serializeUser() throws IOException {
 
         User user =User.getInstance();
-        String filename = "./UserFiles/"+user.handle+".txt";
+        String filename = "offcoder_/UserFiles/"+user.handle+".txt";
         FileOutputStream fout=new FileOutputStream(filename);
         ObjectOutputStream out=new ObjectOutputStream(fout);
         out.writeObject(user);
@@ -77,7 +82,7 @@ public class userAuth {
 
         //CHECKING IF THE FILE EXISTS OR NOT
 
-        String filename = "./UserFiles/"+user_name+".txt";
+        String filename = "offcoder_/UserFiles/"+user_name+".txt";
         File f = new File(filename);
         if(!f.isFile()) {
             return -1;
