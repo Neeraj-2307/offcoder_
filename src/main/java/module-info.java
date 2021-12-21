@@ -12,6 +12,7 @@ module com.example.offcodercyberquest {
     requires java.logging;
     requires org.controlsfx.controls;
     requires org.seleniumhq.selenium.chrome_driver;
+    requires javafx.web;
     opens com.example.offcodercyberquest to javafx.fxml;
     exports com.example.offcodercyberquest;
     opens com.example.offcodercyberquest.Controller to javafx.fxml;
