@@ -134,4 +134,20 @@
   "ratingUpdateTimeSeconds" : 1639224300,
   "oldRating" : 1116,
   "newRating" : 1111
+}, {
+  "contestId" : 1618,
+  "contestName" : "Codeforces Round #760 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 1885,
+  "ratingUpdateTimeSeconds" : 1639500600,
+  "oldRating" : 1111,
+  "newRating" : 1211
+}, {
+  "contestId" : 1619,
+  "contestName" : "Codeforces Round #762 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 2277,
+  "ratingUpdateTimeSeconds" : 1640019000,
+  "oldRating" : 1211,
+  "newRating" : 1266
 } ]

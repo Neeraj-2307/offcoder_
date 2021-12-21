@@ -1,7 +1,7 @@
 package com.example.offcodercyberquest.Controller;
 
 import com.example.offcodercyberquest.HelloApplication;
-import com.example.offcodercyberquest.userAuth;
+import com.example.offcodercyberquest.UserAuth;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -45,7 +45,7 @@ public class LoginController {
         }
         else {
             wronglogin.setText("Success!");
-            userAuth newUser = new userAuth();
+            UserAuth newUser = new UserAuth();
             String user_name = username.getText();
             String user_password = password.getText();
             int status = newUser.deserializeUser(user_name,user_password);

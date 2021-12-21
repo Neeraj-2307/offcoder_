@@ -1,8 +1,10 @@
 package com.example.offcodercyberquest.Controller;
 
+import com.example.offcodercyberquest.Automation;
 import com.example.offcodercyberquest.Beans.Code;
 import com.example.offcodercyberquest.Beans.Language;
 import com.example.offcodercyberquest.Beans.TestCase;
+import com.example.offcodercyberquest.Beans.User;
 import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.environments.*;
 import com.example.offcodercyberquest.queue.DownloadTask;
@@ -21,9 +23,9 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextFlow;
+import javafx.scene.web.WebView;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -38,7 +40,7 @@ public class EditorController implements Initializable {
     @FXML
     private TextArea codeArea, outputArea, customInputArea;
     @FXML
-    private TextFlow metaFlow, problemFlow;
+    private WebView questionView;
     @FXML
     private Button submitButton, runAllButton, compileButton, runButton;
     @FXML
@@ -71,39 +73,34 @@ public class EditorController implements Initializable {
 
     public void setQuestionView() {
         //TODO Fetch Question from file and display;
-
-        Text meta = new Text("""
-                J. Robot Factory
-                time limit per test : 1 second
-                memory limit per test : 256 megabytes
-                input : standard input
-                output : standard output
-                """);
-
-        metaFlow.setPadding(new Insets(10, 10, 10, 10));
-        metaFlow.setTextAlignment(TextAlignment.CENTER);
-
-        Text problemDescription = new Text("""
-                You have received data from a Bubble bot. You know your task is to make factory facilities, but before you even start, you need to know how big the factory is and how many rooms it has. When you look at the data you see that you have the dimensions of the construction, which is in rectangle shape: N x M.
-                Then in the next N lines you have M numbers. These numbers represent factory tiles and they can go from 0 to 15. Each of these numbers should be looked in its binary form. Because from each number you know on which side the tile has walls. For example number 10 in it's binary form is 1010, which means that it has a wall from the North side, it doesn't have a wall from the East, it has a wall on the South side and it doesn't have a wall on the West side. So it goes North, East, South, West.
-                It is guaranteed that the construction always has walls on it's edges. The input will be correct.
-                Your task is to print the size of the rooms from biggest to smallest.""");
-
-        problemFlow.setPadding(new Insets(10, 10, 10, 10));
-        metaFlow.getChildren().add(meta);
-        problemFlow.getChildren().add(problemDescription);
-
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(new File(".\\questions\\ques1.txt")));
+            StringBuffer buffer = new StringBuffer();
+            String x = "";
+            while((x = reader.readLine()) != null){
+                buffer.append(x);
+            }
+            questionView.getEngine().loadContent(buffer.toString());
+        } catch (IOException ie) {
+            ie.printStackTrace();
+        }
     }
 
+    public void onSubmit(ActionEvent e) throws IOException {
+        CodeFileHandler codeFileHandler = new CodeFileHandler(fetchCode());
+        File file = codeFileHandler.createFile();
 
-    public void onSubmit(ActionEvent e) {
-        //TODO submit util
-        TaskQueue.getInstance().addTask(new SubmitTask());
+        // TODO HARDCODE
+        String contestID = "1546";
+        String problemID = "A";
+        //
+
+        SubmitTask submitTask = new SubmitTask(contestID, problemID, file, getSelectedLanguage());
+        TaskQueue.getInstance().addTask(submitTask);
     }
 
     private void setDefaultCode() {
-        // TODO ..........
-        //codeArea.setText(user.getDefaultCode(Language.JAVA));
+        //TODO
     }
 
     private Code fetchCode() {
@@ -127,15 +124,21 @@ public class EditorController implements Initializable {
         expandTiledPane(outputTiledPane);
     }
 
-    public void onRunAll(ActionEvent e) {
-        System.out.println("RAN ALL TC");
-        System.out.println(fetchCode().getCode());
-        //TODO compile & run then set text in output Area
+    public void onRunAll(ActionEvent e) throws IOException {
+        long milliseconds = 10 * 1000;
+        // TODO;
+        // fetch problem tc..
+        TestCase originalTC = fetchCustomInput();
+        Code code = fetchCode();
+        String op = runUtil(code,  milliseconds, originalTC);
+
+        // Display output.
+        outputArea.setText(op);
+        expandTiledPane(outputTiledPane);
     }
 
 
     public void onCompile(ActionEvent e) throws IOException {
-        // TODO
         System.out.println("COMPILED");
         Code code = fetchCode();
 
@@ -143,6 +146,8 @@ public class EditorController implements Initializable {
         outputArea.setText(output);
         expandTiledPane(outputTiledPane);
     }
+
+    // helper method for onRun
     public String runUtil(Code code, long milliseconds, TestCase testcase) throws IOException {
         CodeFileHandler fileHandler = new CodeFileHandler(code);
         // creates a temp file in local directory.

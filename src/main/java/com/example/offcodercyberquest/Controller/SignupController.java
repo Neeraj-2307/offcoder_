@@ -2,8 +2,8 @@ package com.example.offcodercyberquest.Controller;
 
 
 import com.example.offcodercyberquest.HelloApplication;
-import com.example.offcodercyberquest.userAuth;
-import com.example.offcodercyberquest.userStats;
+import com.example.offcodercyberquest.UserAuth;
+import com.example.offcodercyberquest.UserStats;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -50,7 +50,7 @@ public class SignupController {
             String user_name = username.getText();
             String user_password = password.getText();
             String user_email = email.getText();
-            userAuth newUser = new userAuth();
+            UserAuth newUser = new UserAuth();
             int status = newUser.makeUser(user_name,user_password,user_email);
             if(status == -1){
                 wronglogin.setText("Please enter correct Username or Email");
@@ -58,7 +58,7 @@ public class SignupController {
             else
             {
                 //CALCULATING MAKECHART AT SIGNUP TIME TO REDUCE WAITING TIME LATER
-                userStats stats = new userStats();
+                UserStats stats = new UserStats();
                 stats.makeChart(user_name);
 
                 //CHANGING SCENE

@@ -16,7 +16,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class userStats {
+public class UserStats {
 
     //DATA STRUCTURES REQUIRED FOR STATS
     static int ac = 0, wa = 0, tle = 0, ce = 0, re = 0;
@@ -47,7 +47,7 @@ public class userStats {
         JsonNode arrNode = node.get("result");
 
         //STORING INSIDE JSON FILE
-        String filename = "offcoder_/ApiResponse/" + user_handle + "1.json";
+        String filename = ".\\ApiResponse\\" + user_handle + "1.json";
         objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filename), arrNode);
     }
 
@@ -68,7 +68,7 @@ public class userStats {
         JsonNode arrNode2 = node2.get("result");
 
         //STORING INSIDE JSON FILE
-        String filename2 = "offocder_/ApiResponse/"+user_handle+"2.json";
+        String filename2 = ".\\ApiResponse\\"+user_handle+"2.json";
         objectMapper2.writerWithDefaultPrettyPrinter().writeValue(new File(filename2), arrNode2);
 
     }
@@ -77,7 +77,7 @@ public class userStats {
 
         //CHECKING IF THE FILE EXISTS OR NOT
         user_name = user_handle;
-        String filename = "offcoder_/ApiResponse/"+user_handle+"1.json";
+        String filename = ".\\ApiResponse\\"+user_handle+"1.json";
         File f = new File(filename);
         if(!f.isFile()) {
             callChart(user_handle);
@@ -168,7 +168,7 @@ public class userStats {
     public XYChart.Series getLineChart() throws IOException, InterruptedException {
 
         //CHECKING IF THE FILE EXISTS OR NOT
-        String filename = "offcoder_/ApiResponse/"+user_name+"2.json";
+        String filename = ".\\ApiResponse\\"+user_name+"2.json";
         File f = new File(filename);
         if(!f.isFile()) {
             callLineChart(user_name);

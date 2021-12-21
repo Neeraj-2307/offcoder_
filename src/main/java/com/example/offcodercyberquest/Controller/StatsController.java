@@ -1,6 +1,6 @@
 package com.example.offcodercyberquest.Controller;
 import com.example.offcodercyberquest.HelloApplication;
-import com.example.offcodercyberquest.userStats;
+import com.example.offcodercyberquest.UserStats;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -61,7 +61,7 @@ public class StatsController implements Initializable {
 
 
 
-    userStats data = new userStats();
+    UserStats data = new UserStats();
     ObservableList<PieChart.Data> pieChartData = data.getPieChart();
 
     public void stats_controller() throws IOException, InterruptedException {

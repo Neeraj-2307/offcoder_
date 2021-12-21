@@ -12,7 +12,7 @@ import java.net.http.HttpResponse;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class userAuth {
+public class UserAuth {
 
 
     public int makeUser(String user_name, String user_password, String user_email) throws IOException, InterruptedException {
@@ -58,7 +58,7 @@ public class userAuth {
 //      USER CLASS CALL FOR INITIALIZATION
         User user = User.getInstance();
         user.setInstance(result,user_password,user_email);
-        userStats stat = new userStats();
+        UserStats stat = new UserStats();
         stat.avatar = user.titlePhoto;
         serializeUser();
         return 0;
@@ -68,7 +68,7 @@ public class userAuth {
     public void serializeUser() throws IOException {
 
         User user =User.getInstance();
-        String filename = "offcoder_/UserFiles/"+user.handle+".txt";
+        String filename = ".\\UserFiles\\"+user.handle+".txt";
         FileOutputStream fout=new FileOutputStream(filename);
         ObjectOutputStream out=new ObjectOutputStream(fout);
         out.writeObject(user);
@@ -82,7 +82,7 @@ public class userAuth {
 
         //CHECKING IF THE FILE EXISTS OR NOT
 
-        String filename = "offcoder_/UserFiles/"+user_name+".txt";
+        String filename = ".\\UserFiles\\"+user_name+".txt";
         File f = new File(filename);
         if(!f.isFile()) {
             return -1;
@@ -95,7 +95,7 @@ public class userAuth {
         if(password.equals(user.password)) {
 
             //CALCULATING OTHER CHARTS AT LOGIN TIME TO REDUCE WAITING TIME LATER
-            userStats stats = new userStats();
+            UserStats stats = new UserStats();
             stats.makeChart(user.handle);
             stats.avatar = user.titlePhoto;
             return 1;

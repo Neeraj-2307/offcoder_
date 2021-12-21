@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     private static Stage stg;
-
+    private TaskManager manager;
     @Override
     public void start(Stage stage) {
         try {
@@ -22,7 +22,7 @@ public class HelloApplication extends Application {
             stage.show();
 
             // task manager thread
-            TaskManager manager = new TaskManager();
+            manager = new TaskManager();
             manager.setName("TASK MANAGER THREAD");
             manager.start();
 
@@ -37,5 +37,11 @@ public class HelloApplication extends Application {
         stg.getScene().setRoot(pane);
     }
     public static void main(String[] args) {launch(args);
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+        Chrometon.getDriverInstance().quit();
     }
 }
