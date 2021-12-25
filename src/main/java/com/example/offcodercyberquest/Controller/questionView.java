@@ -25,7 +25,7 @@ private WebView webView;
         webView.setContextMenuEnabled(false);
     }
     String fetchViaFile() {
-        String fileName = "C:\\Users\\Anshi Goel\\Documents\\javaWork\\offcoder_\\questions\\ques1.txt";
+        String fileName = ".\\Contests\\contest1.txt";
         File file = new File(fileName);
 
         StringBuffer html = new StringBuffer();

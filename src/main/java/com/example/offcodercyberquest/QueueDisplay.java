@@ -13,7 +13,7 @@ public class QueueDisplay extends Application{
 	
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parent root=FXMLLoader.load((getClass().getResource("DisplayQueue.fxml")));
+		Parent root=FXMLLoader.load((getClass().getResource("ContestEditor.fxml")));
 		Scene scene=new Scene(root,Color.ALICEBLUE);
 		stage.setTitle("pending");
 		stage.setScene(scene);

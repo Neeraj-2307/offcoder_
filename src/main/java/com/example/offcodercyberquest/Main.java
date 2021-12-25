@@ -14,7 +14,7 @@ import java.util.Objects;
 public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parent root=FXMLLoader.load((Objects.requireNonNull(getClass().getResource("web.fxml"))));
+		Parent root=FXMLLoader.load((Objects.requireNonNull(getClass().getResource("ContestEditor.fxml"))));
 		Scene scene=new Scene(root,Color.ALICEBLUE);
 		stage.setTitle("pending");
 		stage.setScene(scene);

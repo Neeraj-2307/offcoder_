@@ -48,7 +48,7 @@
         <Label alignment="CENTER" layoutX="247.0" layoutY="103.0" prefHeight="17.0" prefWidth="206.0" text="RATING " textFill="WHITE" />
         <ListView fx:id="suggestionList" layoutX="43.0" layoutY="197.0" prefHeight="319.0" prefWidth="639.0" style="-fx-background-color: #8899A6;" />
         <Button fx:id="suggest" layoutX="301.0" layoutY="143.0" mnemonicParsing="false" onAction="#findSuggestion" text="Find Questions " />
-        <Button layoutX="576.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="106.0" text="Download" />
+        <Button fx:id="download" layoutX="576.0" layoutY="172.0" mnemonicParsing="false" onAction="#newDownload" prefHeight="25.0" prefWidth="106.0" text="Download" />
       <Button layoutX="42.0" layoutY="172.0" mnemonicParsing="false" onAction="#load_dashboard" style="-fx-background-color: #f70909;" text="Go to Dashboard" textFill="WHITE" />
     </children>
 </Pane>

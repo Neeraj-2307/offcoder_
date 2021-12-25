@@ -3,6 +3,7 @@ package com.example.offcodercyberquest.Controller;
 import com.example.offcodercyberquest.Beans.Contest;
 import com.example.offcodercyberquest.Beans.Result;
 import com.example.offcodercyberquest.HelloApplication;
+import com.example.offcodercyberquest.Scrapper.ContestScrapper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -42,12 +43,13 @@ public class ContestController implements Initializable {
             response.append(inputLine);
         }
         in.close();
+       //System.out.println(response);
         JSONObject obj1 = new JSONObject(response.toString());
         JSONArray arr = obj1.getJSONArray("result");
         for (int i = 0; i < arr.length(); i++)
         {
             String ver = arr.getJSONObject(i).getString("phase");
-            if(!ver.equals("FINISHED") ){
+            if(ver.equals("FINISHED") ){
                 Result r=new Result();
                 r.setId(arr.getJSONObject(i).getInt("id"));
                 r.setName(arr.getJSONObject(i).getString("name"));
@@ -55,7 +57,17 @@ public class ContestController implements Initializable {
                 ContestList.getItems().add(r);
             }
         }
+        System.out.println("task done");
+
     }
+    @FXML
+    private void downloadContest() throws IOException {
+        String contestid= String.valueOf(ContestList.getSelectionModel().getSelectedItem().getId());
+        String url="https://codeforces.com/contest/"+contestid+"/problems";
+        ContestScrapper cs=new ContestScrapper();
+        cs.myScrapper(url,contestid);
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

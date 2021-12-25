@@ -32,7 +32,7 @@ public class ProblemScrapper {
     }
 
 
-    public void myScrapper(String url) throws IOException {
+    public void myScrapper(String url,String contestid, String idx) throws IOException {
         Document jsoup= Jsoup.connect(url).get();
         Problem p=new Problem();
         p.setTimeLimit(jsoup.getElementsByAttributeValue("class","time-limit").html());
@@ -51,14 +51,12 @@ public class ProblemScrapper {
 
         StringBuilder problem= new StringBuilder();
 
-        for(Element e : s){
-            problem.append(e.html()).append("\n");
-        }
+
 
         p.setStatement(problem.toString());
 
 //            System.out.println(p.getStatement());
-//          System.out.println(p.getSamples());
+          System.out.println(problem);
 
 
         String ques1="<!DOCTYPE html>\n" +
@@ -99,7 +97,7 @@ public class ProblemScrapper {
                  String ques3 = "</body>\n" +
                 "</html>";
                  String ques=ques1+ques2+ques3;
-                 String fileName = "C:\\Users\\Anshi Goel\\Documents\\javaWork\\offcoder_\\questions\\ques1.txt";
+                 String fileName = ".\\questions\\"+contestid+idx+".txt";
                 FileOutputStream fout=new FileOutputStream(fileName);
                 fout.write(ques.getBytes());
                 fout.close();

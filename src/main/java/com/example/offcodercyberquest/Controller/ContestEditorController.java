@@ -1,13 +1,10 @@
 package com.example.offcodercyberquest.Controller;
 
-import com.example.offcodercyberquest.Automation;
 import com.example.offcodercyberquest.Beans.Code;
 import com.example.offcodercyberquest.Beans.Language;
 import com.example.offcodercyberquest.Beans.TestCase;
-import com.example.offcodercyberquest.Beans.User;
 import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.environments.*;
-import com.example.offcodercyberquest.queue.DownloadTask;
 import com.example.offcodercyberquest.queue.SubmitTask;
 import com.example.offcodercyberquest.queue.TaskQueue;
 import com.example.offcodercyberquest.utils.CodeFileHandler;
@@ -15,39 +12,43 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TitledPane;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
-import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebView;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
-public class EditorController implements Initializable {
+public class ContestEditorController implements Initializable {
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
         HelloApplication m = new HelloApplication();
         m.changeScene("dashboard.fxml");
     }
     @FXML
+    private Text timer;
+    @FXML
+    private TextField index;
+    @FXML
     private TextArea codeArea, outputArea, customInputArea;
     @FXML
     private WebView questionView;
     @FXML
-    private Button submitButton, runAllButton, compileButton, runButton;
+    private Button submitButton, runAllButton, compileButton, runButton,startTime;
     @FXML
     private ChoiceBox<String> languageChoiceBox;
     @FXML
     private TitledPane outputTiledPane, customInputTiledPane;
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setQuestionView();
@@ -74,7 +75,7 @@ public class EditorController implements Initializable {
     public void setQuestionView() {
         //TODO Fetch Question from file and display;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File(".\\questions\\ques1.txt")));
+            BufferedReader reader = new BufferedReader(new FileReader(new File(".\\Contests\\1614.txt")));
             StringBuffer buffer = new StringBuffer();
             String x = "";
             while((x = reader.readLine()) != null){
@@ -87,12 +88,14 @@ public class EditorController implements Initializable {
     }
 
     public void onSubmit(ActionEvent e) throws IOException {
+        if(!startTime.isDisabled())
+            timer.setText("start contest for more pressure");
         CodeFileHandler codeFileHandler = new CodeFileHandler(fetchCode());
         File file = codeFileHandler.createFile();
 
         // TODO HARDCODE
-        String contestID = "1546";
-        String problemID = "A";
+        String contestID = "1620";
+        String problemID =index.getText().toUpperCase();
         //
 
         SubmitTask submitTask = new SubmitTask(contestID, problemID, file, getSelectedLanguage());
@@ -226,5 +229,28 @@ public class EditorController implements Initializable {
         outputArea.setText("""
                 TODO
                 """);
+    }
+
+
+    public void startTimer(ActionEvent actionEvent) {
+        startTime.setDisable(true);
+        final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
+
+        final Runnable runnable = new Runnable() {
+            int countdownStarter = 5;
+
+            public void run() {
+
+                timer.setText(String.valueOf(countdownStarter));
+                countdownStarter--;
+
+                if (countdownStarter < 0) {
+                    timer.setText("Time is UP!!!");
+                    scheduler.shutdown();
+                    startTime.setDisable(false);
+                }
+            }
+        };
+        scheduler.scheduleAtFixedRate(runnable, 0, 1, TimeUnit.SECONDS);
     }
 }

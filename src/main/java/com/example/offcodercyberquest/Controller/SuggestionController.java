@@ -27,9 +27,18 @@ public class SuggestionController implements Initializable{
     @FXML
     private Slider rating;
     @FXML
-    private Button suggest;
+    private Button suggest,download;
     @FXML
     private ListView<Suggestion> suggestionList;
+    @FXML
+    void newDownload() throws IOException {
+        String contestid= String.valueOf(suggestionList.getSelectionModel().getSelectedItem().getContestId());
+        String index=suggestionList.getSelectionModel().getSelectedItem().getIndex();
+        System.out.println(contestid+" "+index);
+        String downloadurl="https://codeforces.com/problemset/problem/"+contestid+"/"+index;
+        ProblemScrapper problemScrapper=new ProblemScrapper();
+        problemScrapper.myScrapper(downloadurl,contestid,index);
+    }
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
         HelloApplication m = new HelloApplication();
@@ -44,7 +53,7 @@ public class SuggestionController implements Initializable{
 
     public  void findSuggestion() throws Exception {
         suggestionList.getItems().clear();
-        System.out.print("abc");
+        System.out.print("Get contest starts");
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
@@ -59,21 +68,20 @@ public class SuggestionController implements Initializable{
             response.append(inputLine);
         }
         in.close();
-       //System.out.println(response);
+       System.out.println(response);
        JSONObject obj1 = new JSONObject(response.toString());
        JSONObject problems=obj1.getJSONObject("result");
        JSONArray arr=problems.getJSONArray("problems");
-        for (int i = 0; i < Math.min(arr.length(),10); i++)
-        {
+        for (int i = 0; i < Math.min(arr.length(),15); i++){
             Suggestion s=new Suggestion();
             s.setContestId(arr.getJSONObject(i).getInt("contestId"));
             s.setName(arr.getJSONObject(i).getString("name"));
+            s.setIndex(arr.getJSONObject(i).getString("index"));
             if(arr.getJSONObject(i).has("rating"))
                 s.setRating(arr.getJSONObject(i).getInt("rating"));
             suggestionList.getItems().add(s);
         }
-       ProblemScrapper sc=new ProblemScrapper();
-       sc.myScrapper("https://codeforces.com/contest/1586/problem/A");
+
     }
 
     @Override
@@ -83,5 +91,4 @@ public class SuggestionController implements Initializable{
         rating.setMax(2500);
         rating.adjustValue(1200);
     }
-
 }

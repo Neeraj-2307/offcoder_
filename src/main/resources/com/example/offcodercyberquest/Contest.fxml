@@ -18,12 +18,13 @@
         <Line endX="238.20001220703125" endY="-1.52587890625E-5" layoutX="441.0" layoutY="220.0" startX="-247.4000244140625" startY="-1.52587890625E-5" />
         <Button layoutX="400.0" layoutY="174.0" mnemonicParsing="false" style="-fx-background-color: #8899a6;" text="Create Contest" textFill="WHITE" />
         <ListView fx:id="ContestList" layoutX="43.0" layoutY="295.0" prefHeight="326.0" prefWidth="808.0" />
-      <Button fx:id="Fetch" layoutX="122.0" layoutY="247.0" mnemonicParsing="false" onAction="#fetchList" prefHeight="25.0" prefWidth="630.0" text="click to seecontests" />
-      <Text fill="WHITE" layoutX="267.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Contest" textAlignment="CENTER" wrappingWidth="321.56321716308594">
-         <font>
-            <Font name="Bodoni Bd BT Bold" size="25.0" />
-         </font>
-      </Text>
-      <Button fx:id="dashboard" layoutX="752.0" layoutY="15.0" mnemonicParsing="false" onAction="#load_dashboard" style="-fx-background-color: #fa0404;" text="Back to dashboard" textFill="WHITE" />
+        <Button fx:id="Fetch" layoutX="122.0" layoutY="247.0" mnemonicParsing="false" onAction="#fetchList" prefHeight="25.0" prefWidth="630.0" text="click to seecontests" />
+        <Text fill="WHITE" layoutX="267.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Contest" textAlignment="CENTER" wrappingWidth="321.56321716308594">
+            <font>
+                <Font name="Bodoni Bd BT Bold" size="25.0" />
+            </font>
+        </Text>
+        <Button fx:id="dashboard" layoutX="752.0" layoutY="15.0" mnemonicParsing="false" onAction="#load_dashboard" style="-fx-background-color: #fa0404;" text="Back to dashboard" textFill="WHITE" />
+      <Button layoutX="764.0" layoutY="272.0" mnemonicParsing="false" onAction="#downloadContest" text="GET CONTEST" />
     </children>
 </Pane>
