@@ -4,6 +4,8 @@ import com.example.offcodercyberquest.Beans.Contest;
 import com.example.offcodercyberquest.Beans.Result;
 import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.Scrapper.ContestScrapper;
+import com.example.offcodercyberquest.queue.DownloadTask;
+import com.example.offcodercyberquest.queue.TaskQueue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -17,7 +19,13 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
 
+import javafx.scene.control.Tab;
 import org.json.*;
+
+/*
+* This contestController Class is Downloading Contest from codeforces site
+*
+* */
 public class ContestController implements Initializable {
     @FXML
     private Button dashboard;
@@ -26,6 +34,9 @@ public class ContestController implements Initializable {
     @FXML
     private Button Fetch;
     Contest contest=new Contest();
+    /*
+    * Fetching the list from codeforces site
+    * */
     public  void fetchList() throws Exception{
         ContestList.getItems().clear();
         String url = "https://codeforces.com/api/contest.list?gym=false";
@@ -43,7 +54,7 @@ public class ContestController implements Initializable {
             response.append(inputLine);
         }
         in.close();
-       //System.out.println(response);
+
         JSONObject obj1 = new JSONObject(response.toString());
         JSONArray arr = obj1.getJSONArray("result");
         for (int i = 0; i < arr.length(); i++)
@@ -60,18 +71,24 @@ public class ContestController implements Initializable {
         System.out.println("task done");
 
     }
+    /*
+    * Adding task to taskqueue and check for internet to arrive .
+    *
+    * */
     @FXML
     private void downloadContest() throws IOException {
         String contestid= String.valueOf(ContestList.getSelectionModel().getSelectedItem().getId());
-        String url="https://codeforces.com/contest/"+contestid+"/problems";
-        ContestScrapper cs=new ContestScrapper();
-        cs.myScrapper(url,contestid);
+        DownloadTask dt=new DownloadTask(contestid);
+        TaskQueue.getInstance().addTask(dt);
     }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+    /*
+    * get back to dashboard
+    * */
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
         HelloApplication m = new HelloApplication();

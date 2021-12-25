@@ -12,7 +12,13 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
 import java.io.IOException;
-
+/*
+*
+*
+* making a newUser in singleton type so that it is safe and accessable all over the project and automate stuff
+*
+*
+* */
 public class SignupController {
 
     @FXML

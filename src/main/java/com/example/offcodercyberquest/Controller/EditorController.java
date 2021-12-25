@@ -30,7 +30,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-
+/*
+*
+* This editor view is showing a single problem form the already downloaded questions
+*
+* */
 public class EditorController implements Initializable {
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {

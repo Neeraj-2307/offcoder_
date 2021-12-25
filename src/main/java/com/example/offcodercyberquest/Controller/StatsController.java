@@ -21,6 +21,17 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/*
+*
+*
+* getting data from the json and displaying the stats of the user which includes
+* data of user
+* history of submitted questions
+* stats
+* graph
+*
+*
+* */
 public class StatsController implements Initializable {
 
     @FXML

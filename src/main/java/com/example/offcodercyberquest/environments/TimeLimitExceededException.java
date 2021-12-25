@@ -1,5 +1,12 @@
 package com.example.offcodercyberquest.environments;
 
+/*
+*
+*
+* A special exception made to deal with tle error as it may abort abruptly it can now show an error.
+*
+*
+* */
 public class TimeLimitExceededException extends Exception{
     public TimeLimitExceededException() {
         super();

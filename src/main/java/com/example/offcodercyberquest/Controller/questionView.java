@@ -12,6 +12,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/*
+*
+*
+*
+*
+* ONLY FOR TESTING PURPOSE
+*
+*
+*
+*
+*
+* */
+
 public class questionView implements Initializable {
 String html="";
 @FXML

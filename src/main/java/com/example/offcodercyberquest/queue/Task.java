@@ -1,5 +1,11 @@
 package com.example.offcodercyberquest.queue;
-
+/*
+*
+*
+* Providing interface for the main logic of queue that has to be displayed.
+*
+*
+* */
 public interface Task {
 
     // must override to add logic for the task to be performed.

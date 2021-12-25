@@ -11,7 +11,7 @@ public class Chrometon {
     private Chrometon(){
         System.setProperty("webdriver.chrome.driver",".\\Resources\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--disable-gpu");
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
          webDriver = new ChromeDriver(options);

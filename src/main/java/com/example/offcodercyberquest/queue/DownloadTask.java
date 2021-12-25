@@ -1,24 +1,53 @@
 package com.example.offcodercyberquest.queue;
 
+import com.example.offcodercyberquest.Automation;
 import javafx.application.Platform;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 
+import java.io.IOException;
+/*
+*
+*
+* Class to simulate downloading as download have 2 option so 2 constructure will be there
+*
+*
+*
+* */
 public class DownloadTask implements Task{
+    private String problemID;
+    private String contestID;
 
-    @Override
+    // constructor if download contest
+    public DownloadTask(String cid){
+        contestID=cid;
+        problemID="NO";
+    }
+    //constructor to download problem
+    public DownloadTask(String id,String cid){
+        problemID=id;
+        contestID=cid;
+    }
     public void perform() {
-        try{
-            System.out.println("Started Download task");
-            // TODO logic for downloading/scraping question or editorial.
-            Thread.sleep(2000);
-            System.out.println("DONE");
-            onComplete();
-        }catch (InterruptedException ie){
+
+        System.out.println("Started Download task");
+
+        Automation automation = new Automation();
+        String verdict = null;
+        try {
+            if(problemID.equals("NO"))
+                verdict=automation.download(contestID);
+            else
+                verdict = automation.download(problemID, contestID);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        System.out.println("DONE\n" + verdict);
+        onComplete();
 
     }
-
+    //notification
     @Override
     public void onComplete() {
         // TODO must display info about completed Download task.

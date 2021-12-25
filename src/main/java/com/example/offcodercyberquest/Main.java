@@ -10,7 +10,25 @@ import javafx.scene.paint.Color;
 
 import java.util.Objects;
 
-
+/*
+*
+*
+*
+*
+*
+*
+*
+* for testing purpose only
+*
+*
+*
+*
+*
+*
+*
+*
+*
+* */
 public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {

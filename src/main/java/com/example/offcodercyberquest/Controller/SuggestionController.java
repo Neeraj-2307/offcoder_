@@ -11,6 +11,8 @@ import java.util.ResourceBundle;
 import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.Scrapper.ProblemScrapper;
 import com.example.offcodercyberquest.Beans.Suggestion;
+import com.example.offcodercyberquest.queue.DownloadTask;
+import com.example.offcodercyberquest.queue.TaskQueue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -35,9 +37,8 @@ public class SuggestionController implements Initializable{
         String contestid= String.valueOf(suggestionList.getSelectionModel().getSelectedItem().getContestId());
         String index=suggestionList.getSelectionModel().getSelectedItem().getIndex();
         System.out.println(contestid+" "+index);
-        String downloadurl="https://codeforces.com/problemset/problem/"+contestid+"/"+index;
-        ProblemScrapper problemScrapper=new ProblemScrapper();
-        problemScrapper.myScrapper(downloadurl,contestid,index);
+        DownloadTask dt=new DownloadTask(contestid,index);
+        TaskQueue.getInstance().addTask(dt);
     }
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {

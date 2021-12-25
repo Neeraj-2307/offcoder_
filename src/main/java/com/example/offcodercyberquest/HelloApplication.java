@@ -9,6 +9,32 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/*
+* OFFCODER
+* Platform simluated for offline purposes: CODEFORCES
+*
+* Project start
+* project Structure:
+* 1. A directory of question (storing questions ), Contest ( storing questions) , User files( storing user authdetails and stats)
+* 2. Beans: to simply the work of getting and setting methods working as dto
+* 3. Controllers hold the logic to  xmls working and displaying UI
+* 4.Enviournments: this will hold support for differnet kind of programming languages that user can cde in
+* 5. queue: this the main logic and thread handler where each task is simluated with an priority and check of intenet control
+* 6. Scrapper : Our own scrapper the will get question and contest data from the codeforces handle on presence of internet
+* 7. utils : include code reader write to seperate logic
+* 8.: resources will contaion all documeneted fxml files that are needed.
+*
+*
+*
+*
+*
+*
+
+*
+*
+*
+* */
+
 public class HelloApplication extends Application {
     private static Stage stg;
     private TaskManager manager;

@@ -3,8 +3,14 @@
 package com.example.offcodercyberquest;
 
 import com.example.offcodercyberquest.Beans.Language;
+import com.example.offcodercyberquest.Beans.Problem;
+import com.example.offcodercyberquest.Scrapper.ContestScrapper;
+import com.example.offcodercyberquest.Scrapper.ProblemScrapper;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +21,8 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.CacheRequest;
 import java.net.URI;
@@ -101,5 +109,36 @@ public class Automation {
 
     public String generateProblemURL(String contestID, String problemID){
         return "https://codeforces.com/contest/" + contestID + "/problem/" + problemID;
+    }
+    public String generateProblemURL(String contestID){
+        return  "https://codeforces.com/contest/"+contestID+"/problems";
+    }
+    public String download(String problemID, String contestID) throws IOException {
+        String fileName = ".\\questions\\"+contestID+problemID+".txt";
+        File f=new File(fileName);
+        if(f.exists())
+            return "Already downloaded";
+        String url=generateProblemURL(contestID,problemID);
+        ProblemScrapper ps=new ProblemScrapper();
+        String ques=ps.myScrapper(url,contestID,problemID);
+
+        FileOutputStream fout=new FileOutputStream(fileName);
+
+        fout.write(ques.getBytes());
+        fout.close();
+        return "successfully downloaded problem";
+    }
+    public String download(String contestID) throws IOException {
+        String fileName = ".\\Contests\\"+contestID+".txt";
+        File f=new File(fileName);
+        if(f.exists())
+            return "Already exisits contest";
+        String url=generateProblemURL(contestID);
+        ContestScrapper cs=new ContestScrapper();
+        String ques=cs.myScrapper(url,contestID);
+        FileOutputStream fout=new FileOutputStream(fileName);
+        fout.write(ques.getBytes());
+        fout.close();
+        return "successfully downloaded Contest";
     }
 }

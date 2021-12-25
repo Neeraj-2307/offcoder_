@@ -28,7 +28,11 @@ import java.util.ResourceBundle;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-
+/*
+*
+* A view which will dispaly the contest and take problem index from user and simulte submit and run test cases accordingly
+*
+* */
 public class ContestEditorController implements Initializable {
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
@@ -51,7 +55,9 @@ public class ContestEditorController implements Initializable {
     private TitledPane outputTiledPane, customInputTiledPane;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        //it will set the question in webView using file
         setQuestionView();
+        //adding languages in drop down
         initLanguageChoiceBox();
         System.out.println(languageChoiceBox.getValue());
     }
@@ -231,7 +237,7 @@ public class ContestEditorController implements Initializable {
                 """);
     }
 
-
+// timer to set used to check time left and submit only till time
     public void startTimer(ActionEvent actionEvent) {
         startTime.setDisable(true);
         final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);

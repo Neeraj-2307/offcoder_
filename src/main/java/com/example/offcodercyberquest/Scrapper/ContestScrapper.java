@@ -29,7 +29,7 @@ public class ContestScrapper {
     }
 
 
-    public void myScrapper(String url,String contestid) throws IOException {
+    public String myScrapper(String url,String contestid) throws IOException {
 
         System.out.println(url);
         Document jsoup= Jsoup.connect(url).get();
@@ -64,7 +64,7 @@ public class ContestScrapper {
                 "<html>\n" +
                 "<head>\n" +"<style>\n" +
                 "body{\n" +
-                "    background-color: black;\n" +
+                "    background-color: #212121;\n" +
                 "    color: aliceblue;\n" +
                 "    text-align: center;\n " +
                 "    margin-left:20px;\n" +
@@ -101,10 +101,8 @@ public class ContestScrapper {
         String ques3 = "</body>\n" +
                 "</html>";
        setQuestion(ques1+ques2+ques3);
-        String fileName = ".\\Contests\\"+contestid+".txt";
-        FileOutputStream fout=new FileOutputStream(fileName);
-        fout.write(getQuestion().getBytes());
-        fout.close();
+       return getQuestion();
+
     }
 
 

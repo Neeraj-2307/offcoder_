@@ -32,7 +32,7 @@ public class ProblemScrapper {
     }
 
 
-    public void myScrapper(String url,String contestid, String idx) throws IOException {
+    public String myScrapper(String url,String contestid, String idx) throws IOException {
         Document jsoup= Jsoup.connect(url).get();
         Problem p=new Problem();
         p.setTimeLimit(jsoup.getElementsByAttributeValue("class","time-limit").html());
@@ -63,7 +63,7 @@ public class ProblemScrapper {
                 "<html>\n" +
                 "<head>\n" +"<style>\n" +
                 "body{\n" +
-                "    background-color: black;\n" +
+                "    background-color: #212121;\n" +
                 "    color: aliceblue;\n" +
                 "    text-align: center;\n" +
                 "}\n" +
@@ -96,10 +96,6 @@ public class ProblemScrapper {
 
                  String ques3 = "</body>\n" +
                 "</html>";
-                 String ques=ques1+ques2+ques3;
-                 String fileName = ".\\questions\\"+contestid+idx+".txt";
-                FileOutputStream fout=new FileOutputStream(fileName);
-                fout.write(ques.getBytes());
-                fout.close();
+                 return ques1+ques2+ques3;
     }
 }
