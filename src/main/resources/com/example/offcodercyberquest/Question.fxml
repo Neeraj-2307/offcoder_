@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="668.0" prefWidth="878.0" style="-fx-background-color: #152013;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.offcodercyberquest.Controller.QuestionController">
    <children>
-      <Button fx:id="HistoryList" layoutX="527.0" layoutY="36.0" mnemonicParsing="false" onAction="#showHistory" prefHeight="44.0" prefWidth="278.0" text="HIstory of questions submitted" />
+      <Button layoutX="300.0" layoutY="119.0" mnemonicParsing="false" onAction="#gotoCreate" prefHeight="44.0" prefWidth="278.0" text="Add Questions to a list or create a new list" />
       <ListView fx:id="questionList" layoutX="68.0" layoutY="190.0" prefHeight="443.0" prefWidth="742.0" />
-      <Label fx:id="QuestionDetail" alignment="CENTER" layoutX="68.0" layoutY="119.0" prefHeight="44.0" prefWidth="742.0" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Button fx:id="all" layoutX="374.0" layoutY="80.0" mnemonicParsing="false" onAction="#showAll" prefHeight="54.0" prefWidth="130.0" text="All Questions" />
+      <Button fx:id="all" layoutX="516.0" layoutY="40.0" mnemonicParsing="false" onAction="#showAll" prefHeight="44.0" prefWidth="310.0" text="All Questions" />
       <Button fx:id="favList" layoutX="68.0" layoutY="36.0" mnemonicParsing="false" onAction="#showFavList" prefHeight="44.0" prefWidth="286.0" text="Fav lists" />
-      <Button fx:id="showList" layoutX="746.0" layoutY="163.0" mnemonicParsing="false" onAction="#showList" text="Show list" visible="false" />
+      <Button fx:id="showList" layoutX="746.0" layoutY="163.0" mnemonicParsing="false" onAction="#showSelection" text="Show list" visible="false" />
       <Button layoutX="387.0" layoutY="45.0" mnemonicParsing="false" onAction="#load_dashboard" style="-fx-background-color: #f70909;" text="go to dashboard" textFill="WHITE" />
+      <Button fx:id="edit" layoutX="68.0" layoutY="163.0" mnemonicParsing="false" onAction="#gotoEditor" text="Solve problem" />
    </children>
 </AnchorPane>

@@ -20,7 +20,7 @@ public class DashboardController {
     private Button contest_button;
 
     @FXML
-    private Button history_button;
+    private Button problem_button;
 
     @FXML
     private Button logout_button;
@@ -48,8 +48,9 @@ public class DashboardController {
     }
 
     @FXML
-    void load_history(ActionEvent event) {
-
+    void load_problems(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("Suggestion.fxml");
     }
 
     @FXML

@@ -2,6 +2,7 @@ package com.example.offcodercyberquest.Controller;
 
 import com.example.offcodercyberquest.Beans.Contest;
 import com.example.offcodercyberquest.Beans.Result;
+import com.example.offcodercyberquest.Beans.User;
 import com.example.offcodercyberquest.HelloApplication;
 import com.example.offcodercyberquest.Scrapper.ContestScrapper;
 import com.example.offcodercyberquest.queue.DownloadTask;
@@ -12,25 +13,30 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.*;
 
 import javafx.scene.control.Tab;
+import javafx.scene.control.TextField;
 import org.json.*;
 
 /*
+*
+*
 * This contestController Class is Downloading Contest from codeforces site
 *
 * */
 public class ContestController implements Initializable {
     @FXML
+    private TextField time;
+    @FXML
     private Button dashboard;
     @FXML
     private ListView<Result> ContestList;
+    @FXML
+    private ListView<String> downloadedQuestion;
     @FXML
     private Button Fetch;
     Contest contest=new Contest();
@@ -84,8 +90,31 @@ public class ContestController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        try {
+            setAlreadyContests();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+    
+    private void setAlreadyContests() throws IOException {
+        String dirName= User.getInstance().handle;
+        String url=".\\"+dirName+"\\contests.txt";
+        downloadedQuestion.getItems().clear();
+        File f=new File(url);
+        BufferedReader br= null;
+        try {
+            br = new BufferedReader(new FileReader(f));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        String st="Error try again after some time or no contests downloaded";
+
+        while ((st = br.readLine()) != null) {
+            downloadedQuestion.getItems().add(st);
+        }
+    }
+
     /*
     * get back to dashboard
     * */
@@ -95,4 +124,16 @@ public class ContestController implements Initializable {
         m.changeScene("dashboard.fxml");
     }
 
+    public void startContest(ActionEvent actionEvent) throws IOException {
+        String contestName=downloadedQuestion.getSelectionModel().getSelectedItem();
+        if(contestName == null)
+            return;
+        String duration=time.getText();
+        HelloApplication m=new HelloApplication();
+        if(duration == null){
+            m.contestToStart("ContestEditor.fxml",contestName,2);
+            return;
+        }
+        m.contestToStart("ContestEditor.fxml",contestName,Integer.parseInt(duration));
+    }
 }

@@ -4,6 +4,7 @@ package com.example.offcodercyberquest;
 
 import com.example.offcodercyberquest.Beans.Language;
 import com.example.offcodercyberquest.Beans.Problem;
+import com.example.offcodercyberquest.Beans.User;
 import com.example.offcodercyberquest.Scrapper.ContestScrapper;
 import com.example.offcodercyberquest.Scrapper.ProblemScrapper;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -20,10 +21,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.CacheRequest;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -113,8 +111,8 @@ public class Automation {
     public String generateProblemURL(String contestID){
         return  "https://codeforces.com/contest/"+contestID+"/problems";
     }
-    public String download(String problemID, String contestID) throws IOException {
-        String fileName = ".\\questions\\"+contestID+problemID+".txt";
+    public String download(String contestID, String problemID) throws IOException {
+        String fileName = ".\\questions\\"+contestID+"_"+problemID+".txt";
         File f=new File(fileName);
         if(f.exists())
             return "Already downloaded";
@@ -126,6 +124,14 @@ public class Automation {
 
         fout.write(ques.getBytes());
         fout.close();
+        fileName=".\\"+ User.getInstance().handle+"\\questions.txt";
+        BufferedWriter out = new BufferedWriter(
+                new FileWriter(fileName, true));
+
+        // Writing on output stream
+        out.write(contestID+"_"+problemID);
+        // Closing the connection
+        out.close();
         return "successfully downloaded problem";
     }
     public String download(String contestID) throws IOException {
@@ -139,6 +145,14 @@ public class Automation {
         FileOutputStream fout=new FileOutputStream(fileName);
         fout.write(ques.getBytes());
         fout.close();
+        fileName=".\\"+ User.getInstance().handle+"\\contests.txt";
+        BufferedWriter out = new BufferedWriter(
+                new FileWriter(fileName, true));
+
+        // Writing on output stream
+        out.write(contestID);
+        // Closing the connection
+        out.close();
         return "successfully downloaded Contest";
     }
 }

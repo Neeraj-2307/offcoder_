@@ -1,8 +1,12 @@
 package com.example.offcodercyberquest;
 
+import com.example.offcodercyberquest.Controller.ContestEditorController;
+import com.example.offcodercyberquest.Controller.EditorController;
 import com.example.offcodercyberquest.queue.TaskManager;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -37,6 +41,9 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     private static Stage stg;
+    private Parent root;
+    private Scene scene;
+    private Stage stage;
     private TaskManager manager;
     @Override
     public void start(Stage stage) {
@@ -56,12 +63,26 @@ public class HelloApplication extends Application {
             e.printStackTrace();
         }
     }
+    public void contestToStart(String fxml,String cid,int duration) throws IOException {
+        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
+        ContestEditorController cec=new ContestEditorController();
+        cec.setIDS(cid,duration);
+        stg.getScene().setRoot(pane);
+    }
+    public void changeToEditor(String fxml, String cid, String pid, ActionEvent event) throws IOException {
+       FXMLLoader loader=new FXMLLoader(getClass().getResource(fxml));
+       root=loader.load();
+        EditorController ec=new EditorController();
+        ec.setIDS(cid,pid);
 
+        stg.getScene().setRoot(root);
+        stg.show();
+    }
     //FUNCTION TO CHANGE SCENE
     public void changeScene(String fxml) throws IOException {
 
-        Parent pane = FXMLLoader.load(getClass().getResource(fxml));
-        stg.getScene().setRoot(pane);
+        root = FXMLLoader.load(getClass().getResource(fxml));
+        stg.getScene().setRoot(root);
     }
     public static void main(String[] args) {launch(args);
     }

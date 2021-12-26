@@ -34,6 +34,8 @@ import java.util.concurrent.TimeUnit;
 *
 * */
 public class ContestEditorController implements Initializable {
+    String contestId;
+    int duration;
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
         HelloApplication m = new HelloApplication();
@@ -60,8 +62,12 @@ public class ContestEditorController implements Initializable {
         //adding languages in drop down
         initLanguageChoiceBox();
         System.out.println(languageChoiceBox.getValue());
+        System.out.println(contestId+duration);
     }
-
+    public void setIDS(String cid,int d){
+        contestId=cid;
+        duration=d;
+    }
     void initLanguageChoiceBox() {
         // Initialize choice box with default lang & available languages.
         List<String> langList = new ArrayList<>();
@@ -243,7 +249,7 @@ public class ContestEditorController implements Initializable {
         final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 
         final Runnable runnable = new Runnable() {
-            int countdownStarter = 5;
+            int countdownStarter = duration*3600;
 
             public void run() {
 

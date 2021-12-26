@@ -36,6 +36,7 @@ import java.util.ResourceBundle;
 *
 * */
 public class EditorController implements Initializable {
+    String contestId,problemId;
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
         HelloApplication m = new HelloApplication();
@@ -51,9 +52,14 @@ public class EditorController implements Initializable {
     private ChoiceBox<String> languageChoiceBox;
     @FXML
     private TitledPane outputTiledPane, customInputTiledPane;
+    public void setIDS(String cid,String pid){
+        contestId=cid;
+        problemId=pid;
 
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         setQuestionView();
         initLanguageChoiceBox();
         System.out.println(languageChoiceBox.getValue());
@@ -76,6 +82,7 @@ public class EditorController implements Initializable {
     }
 
     public void setQuestionView() {
+
         //TODO Fetch Question from file and display;
         try {
             BufferedReader reader = new BufferedReader(new FileReader(new File(".\\questions\\ques1.txt")));
@@ -93,7 +100,7 @@ public class EditorController implements Initializable {
     public void onSubmit(ActionEvent e) throws IOException {
         CodeFileHandler codeFileHandler = new CodeFileHandler(fetchCode());
         File file = codeFileHandler.createFile();
-
+        System.out.println(contestId+problemId);
         // TODO HARDCODE
         String contestID = "1546";
         String problemID = "A";
