@@ -74,8 +74,6 @@ https://embed.creately.com/CyiN5sireEK?type=svg
 *uml
  https://lucid.app/lucidchart/fd81f5d8-2f0a-4705-a2d0-7428261cb87e/edit?invitationId=inv_74ea1e41-64b1-4d03-b109-9e5ff443e9a2
 
-*brainstroming 
-https://lucid.app/lucidchart/9417a0ae-aa7c-4ce8-8b2c-55fb5dba155e/edit?invitationId=inv_22fb441b-1d2e-4aaf-9c27-07be9f3b0a42
 
 ## screenshots
 
