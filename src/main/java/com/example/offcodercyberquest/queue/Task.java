@@ -17,4 +17,6 @@ public interface Task {
 
     // overide to set priority of child class/task.
     TaskPriorities getPriority();
+    String getContestId();
+    String getProblemId();
 }

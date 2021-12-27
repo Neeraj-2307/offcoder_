@@ -36,7 +36,7 @@
                      <buttons>
                         <Button fx:id="submitButton" mnemonicParsing="false" onAction="#onSubmit" text="SUBMIT" />
                         <Button fx:id="runAllButton" mnemonicParsing="false" onAction="#onRunAll" text="RULL ALL" />
-                        <TextField fx:id="index" minWidth="42.0" prefHeight="26.0" promptText="enter ques index (a/b/c....)" style="-fx-background-color: #ff0000; -fx-alignment: center;" />
+                        <TextField fx:id="index" minWidth="42.0" prefHeight="26.0" promptText="enter ques index (a/b/c....)" style="-fx-background-color: #E8E8E8; -fx-alignment: center;" text="A" />
                      </buttons>
                   </ButtonBar>
                </items>

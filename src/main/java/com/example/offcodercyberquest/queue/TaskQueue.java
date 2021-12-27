@@ -1,5 +1,8 @@
 package com.example.offcodercyberquest.queue;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.PriorityQueue;
 // Class to maintain queue of all the tasks added while application is running
 // SINGLETON : task can be added from anywhere in the application.
@@ -29,5 +32,14 @@ public class TaskQueue {
     public Task getTask(){
         return priorityQueue.poll();
     }
+    public List<Task> getTaskList(){
+        Iterator i= priorityQueue.iterator();
+        List<Task> taskList=new ArrayList<>();
+        while(i.hasNext()){
+            Task t= (Task) i.next();
 
+            taskList.add(t);
+        }
+        return taskList;
+    }
 }

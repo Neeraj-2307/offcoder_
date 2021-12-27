@@ -68,4 +68,14 @@ public class DownloadTask implements Task{
     public TaskPriorities getPriority() {
         return TaskPriorities.DOWNLOAD_TASK;
     }
+
+    @Override
+    public String getContestId() {
+        return contestID;
+    }
+
+    @Override
+    public String getProblemId() {
+        return problemID;
+    }
 }

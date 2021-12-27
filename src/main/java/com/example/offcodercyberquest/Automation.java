@@ -76,9 +76,9 @@ public class Automation {
                 .getAttribute("data-csrf");
         return token;
     }
-    public String submit(String contestID, String problemID , File file, Language language) throws IOException, InterruptedException {
+    public String submit(String problemID, String contestID , File file, Language language) throws IOException, InterruptedException {
         String problem_link = generateProblemURL(contestID, problemID);
-
+        System.out.println("c: "+contestID);
         driver.get(problem_link);
 
         Select langDrop = new Select(driver.findElement(By.name("programTypeId")));
@@ -137,9 +137,10 @@ public class Automation {
         fileName=".\\questions\\questions.txt";
         BufferedWriter out = new BufferedWriter(
                 new FileWriter(fileName, true));
-
+        out.newLine();
         // Writing on output stream
         out.write(contestID+"_"+problemID);
+
         // Closing the connection
         out.close();
         return "successfully downloaded problem";
@@ -159,8 +160,10 @@ public class Automation {
         BufferedWriter out = new BufferedWriter(
                 new FileWriter(fileName, true));
 
+        out.newLine();
         // Writing on output stream
         out.write(contestID);
+
         // Closing the connection
         out.close();
         return "successfully downloaded Contest";

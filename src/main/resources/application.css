@@ -65,11 +65,11 @@ ButtonBar{
 }
 
 .text-area{
-    /*-fx-text-fill: white;*/
+    -fx-text-fill: #fff1bd;
     -fx-border-color: transparent;
     -fx-control-inner-background: #363636;
     -fx-font-size: 14pt;
-    -fx-text-fill: green ;
+
     /*-fx-padding: 0;*/
 }
 .text-area:focused{

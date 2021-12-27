@@ -132,7 +132,7 @@ public class ContestController implements Initializable {
         HelloApplication m=new HelloApplication();
 
         ContestEditorController.contestId = contestName;
-        if(duration == null){
+        if(duration.length()==0){
                     ContestEditorController.duration = 2;
                     m.changeScene("ContestEditor.fxml");
             return;

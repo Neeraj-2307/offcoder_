@@ -36,10 +36,10 @@ public class createListController implements Initializable {
             String fileName=".\\"+ User.getInstance().handle+"\\favLists.txt";
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
-
+            out.newLine();
             // Writing on output stream
             out.write(name.getText());
-            out.write("\n");
+
             // Closing the connection
             out.close();
             f.createNewFile();
@@ -63,7 +63,7 @@ public class createListController implements Initializable {
         String fileName=".\\"+ User.getInstance().handle+"\\"+listName+".txt";
         BufferedWriter out = new BufferedWriter(
                 new FileWriter(fileName, true));
-
+        out.newLine();
         // Writing on output stream
         out.write(questionName);
         // Closing the connection
@@ -84,7 +84,7 @@ public class createListController implements Initializable {
 
     private void setQuestions() throws IOException {
         String dirName= User.getInstance().handle;
-        String url=".\\"+dirName+"\\questions.txt";
+        String url=".\\questions\\questions.txt";
         System.out.println(url);
         File f=new File(url);
         BufferedReader br= null;

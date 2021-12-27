@@ -1,4 +1,2 @@
 myfavdp
-brutegraph
-graph1
-graph2
+graph

@@ -17,7 +17,7 @@ public class SubmitTask implements Task {
 
     private String verdict;
 
-    public SubmitTask(String problemID, String contestID, File codefile, Language language) {
+    public SubmitTask(String contestID, String problemID, File codefile, Language language) {
         this.problemID = problemID;
         this.contestID = contestID;
         this.codefile = codefile;
@@ -65,5 +65,15 @@ public class SubmitTask implements Task {
     @Override
     public TaskPriorities getPriority() {
         return TaskPriorities.SUBMIT_TASK;
+    }
+
+    @Override
+    public String getContestId() {
+        return contestID;
+    }
+
+    @Override
+    public String getProblemId() {
+        return problemID;
     }
 }

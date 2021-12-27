@@ -106,11 +106,11 @@ public class ContestEditorController implements Initializable {
         File file = codeFileHandler.createFile();
 
         // TODO HARDCODE
-        String contestID = "1620";
-        String problemID =index.getText().toUpperCase();
+
+        String problemID =index.getText();
         //
 
-        SubmitTask submitTask = new SubmitTask(contestID, problemID, file, getSelectedLanguage());
+        SubmitTask submitTask = new SubmitTask(contestId, problemID, file, getSelectedLanguage());
         TaskQueue.getInstance().addTask(submitTask);
     }
 
@@ -255,11 +255,12 @@ public class ContestEditorController implements Initializable {
 
                 timer.setText(String.valueOf(countdownStarter));
                 countdownStarter--;
-
+                submitButton.setDisable(false);
                 if (countdownStarter < 0) {
                     timer.setText("Time is UP!!!");
                     scheduler.shutdown();
                     startTime.setDisable(false);
+                    submitButton.setDisable(true);
                 }
             }
         };
