@@ -4,7 +4,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="668.0" prefWidth="878.0" style="-fx-background-color: #152013;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.offcodercyberquest.Controller.QuestionController">
+<AnchorPane prefHeight="668.0" prefWidth="878.0" style="-fx-background-color: #15202B;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.offcodercyberquest.Controller.QuestionController">
    <children>
       <Button layoutX="300.0" layoutY="119.0" mnemonicParsing="false" onAction="#gotoCreate" prefHeight="44.0" prefWidth="278.0" text="Add Questions to a list or create a new list" />
       <ListView fx:id="questionList" layoutX="68.0" layoutY="190.0" prefHeight="443.0" prefWidth="742.0" />

@@ -44,27 +44,38 @@ public class UserAuth {
 //        System.out.println(automation.getCSRF());
         //API CALL FOR USER INFO
 
-        String url = "https://codeforces.com/api/user.info?handles=";
-        url = url+user_name;
-        HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create(url)).build();
-        HttpClient client = HttpClient.newBuilder().build();
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        String filename = ".\\ApiResponse\\"+user_name+"3.json";
+        File f = new File(filename);
+        if(!f.isFile()) {
+            String url = "https://codeforces.com/api/user.info?handles=";
+            url = url+user_name;
+            HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create(url)).build();
+            HttpClient client = HttpClient.newBuilder().build();
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
 
-        //JSON NODES TO ACCESS DATA
-        ObjectMapper objectMapper = new ObjectMapper();
-        JsonNode node = objectMapper.readTree(response.body());
-        String status =(String)node.get("status").asText();
+            //JSON NODES TO ACCESS DATA
+            ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode node = objectMapper.readTree(response.body());
+            String status =(String)node.get("status").asText();
+
+            JsonNode arrNode = node.get("result");
+
+            //STORING INSIDE JSON FILE
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(filename), arrNode);
+        }
+
+
 
         //RETURN IF USER DOSEN'T EXIST ON CODEFORCES
-        if(status.equals("FAILED"))
-            return -1;
-        JsonNode result = node.get("result");
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode arrNode = objectMapper.readTree(new File(filename));
+//        JsonNode result = node.get("result");
 
 
 //      USER CLASS CALL FOR INITIALIZATION
         User user = User.getInstance();
-        user.setInstance(result,user_password,user_email);
+        user.setInstance(arrNode,user_password,user_email);
         UserStats stat = new UserStats();
         stat.avatar = user.titlePhoto;
         serializeUser();

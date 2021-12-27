@@ -49,7 +49,7 @@ public class  HelloApplication extends Application {
     public void start(Stage stage) {
         try {
             stg = stage;
-            Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Signup.fxml"));
             Scene scene = new Scene(root,685,475);
             stage.setScene(scene);
             stage.show();

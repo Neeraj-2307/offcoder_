@@ -39,37 +39,37 @@
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
-                <Label layoutX="20.0" layoutY="244.0" text="Email" textFill="WHITE">
+                <Label layoutX="20.0" layoutY="244.0" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
                 <TextField fx:id="username" layoutX="109.0" layoutY="148.0" promptText="Username" />
                 <PasswordField fx:id="password" layoutX="109.0" layoutY="195.0" promptText="Password" />
-                <Button fx:id="button" layoutX="103.0" layoutY="289.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #ffffff;" text="REGISTER" textFill="#192734">
+                <Button fx:id="button" layoutX="97.0" layoutY="271.0" mnemonicParsing="false" onAction="#switchToLogin" style="-fx-background-color: #ffffff;" text="LOGIN" textFill="#192734">
                     <font>
                         <Font name="System Bold" size="15.0" />
                     </font>
                 </Button>
                 <Label fx:id="wronglogin" layoutX="4.0" layoutY="119.0" prefHeight="17.0" prefWidth="253.0" textFill="#ff0202" />
-                <Label layoutX="84.0" layoutY="59.0" text="SIGN UP" textFill="WHITE">
+                <Label layoutX="84.0" layoutY="59.0" text="LOGIN" textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
-                <TextField fx:id="email" editable="false" layoutX="109.0" layoutY="246.0" promptText="Email" text="a@gmail.com" />
+                <TextField fx:id="email" editable="false" layoutX="109.0" layoutY="246.0" promptText="Email" text="a@gmail.com" visible="false" />
             </children>
         </AnchorPane>
     </right>
     <bottom>
         <HBox prefHeight="100.0" prefWidth="200.0" spacing="4.0" BorderPane.alignment="CENTER">
             <children>
-                <Label text="Already have an account?" textFill="WHITE">
+                <Label textFill="WHITE">
                     <font>
                         <Font name="System Bold" size="20.0" />
                     </font>
                 </Label>
-                <Button fx:id="login_button" mnemonicParsing="false" onAction="#login_call" style="-fx-background-color: #8899A6;" text="Login" textFill="#192734">
+                <Button fx:id="login_button" mnemonicParsing="false" onAction="#login_call" style="-fx-background-color: #8899A6;" text="Login" textFill="#192734" visible="false">
                     <font>
                         <Font name="System Bold" size="10.0" />
                     </font>
