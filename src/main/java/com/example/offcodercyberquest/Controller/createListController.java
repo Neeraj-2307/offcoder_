@@ -8,7 +8,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-
 import java.io.*;
 import java.net.URL;
 import java.util.ResourceBundle;
