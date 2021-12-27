@@ -36,7 +36,7 @@ import java.util.ResourceBundle;
 *
 * */
 public class EditorController implements Initializable {
-    String contestId,problemId;
+    static String contestId,problemId;
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
         HelloApplication m = new HelloApplication();
@@ -53,13 +53,13 @@ public class EditorController implements Initializable {
     @FXML
     private TitledPane outputTiledPane, customInputTiledPane;
     public void setIDS(String cid,String pid){
-        contestId=cid;
-        problemId=pid;
-
+        System.out.println("SETID");
+        this.contestId=cid;
+        this.problemId=pid;
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        System.out.println("INITIALIZED");
         setQuestionView();
         initLanguageChoiceBox();
         System.out.println(languageChoiceBox.getValue());
@@ -85,7 +85,8 @@ public class EditorController implements Initializable {
 
         //TODO Fetch Question from file and display;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File(".\\questions\\ques1.txt")));
+            String questionFile = contestId + "_" + problemId + ".txt";
+            BufferedReader reader = new BufferedReader(new FileReader(new File(".\\questions\\" + questionFile)));
             StringBuffer buffer = new StringBuffer();
             String x = "";
             while((x = reader.readLine()) != null){
@@ -101,12 +102,8 @@ public class EditorController implements Initializable {
         CodeFileHandler codeFileHandler = new CodeFileHandler(fetchCode());
         File file = codeFileHandler.createFile();
         System.out.println(contestId+problemId);
-        // TODO HARDCODE
-        String contestID = "1546";
-        String problemID = "A";
-        //
 
-        SubmitTask submitTask = new SubmitTask(contestID, problemID, file, getSelectedLanguage());
+        SubmitTask submitTask = new SubmitTask(contestId, problemId, file, getSelectedLanguage());
         TaskQueue.getInstance().addTask(submitTask);
     }
 
@@ -237,5 +234,10 @@ public class EditorController implements Initializable {
         outputArea.setText("""
                 TODO
                 """);
+    }
+
+    public String getIDS() {
+
+        return this.contestId + this.problemId;
     }
 }

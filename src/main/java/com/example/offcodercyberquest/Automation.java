@@ -35,7 +35,17 @@ public class Automation {
     public Automation(){
         driver = Chrometon.getDriverInstance();
     }
-
+    private void setUpUserFiles(String handle){
+        String root = handle;
+        File parent = new File(root);
+        parent.mkdir();
+        File favlist = new File(parent, "favLists.txt");
+        try {
+            favlist.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public int login(String name,String password) throws InterruptedException {
         driver.get("https://codeforces.com/enter?back=%2F");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -54,7 +64,7 @@ public class Automation {
 
         String csrf = getCSRF();
         System.out.println(csrf);
-//        driver.quit();
+        setUpUserFiles(name);
         return 1;
     }
 

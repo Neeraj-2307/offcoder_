@@ -5,8 +5,11 @@ import com.example.offcodercyberquest.HelloApplication;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
@@ -126,9 +129,15 @@ public class QuestionController implements Initializable {
         if(filename == null)
             return;
         String[] str=filename.split("_");
-        HelloApplication m=new HelloApplication();
         System.out.println("at ques"+str[0]+str[1]);
-        m.changeToEditor("editor-view.fxml",str[0],str[1],event);
+
+        // switch scenes
+        EditorController.problemId = str[1];
+        EditorController.contestId = str[0];
+
+        HelloApplication m = new HelloApplication();
+        m.changeScene("editor-view.fxml");
+
     }
     public void gotoCreate(ActionEvent actionEvent) throws IOException {
         HelloApplication m=new HelloApplication();

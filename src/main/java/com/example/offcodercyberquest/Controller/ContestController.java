@@ -130,10 +130,14 @@ public class ContestController implements Initializable {
             return;
         String duration=time.getText();
         HelloApplication m=new HelloApplication();
+
+        ContestEditorController.contestId = contestName;
         if(duration == null){
-            m.contestToStart("ContestEditor.fxml",contestName,2);
+                    ContestEditorController.duration = 2;
+                    m.changeScene("ContestEditor.fxml");
             return;
         }
-        m.contestToStart("ContestEditor.fxml",contestName,Integer.parseInt(duration));
+        ContestEditorController.duration = Integer.parseInt(duration);
+        m.changeScene("ContestEditor.fxml");
     }
 }
