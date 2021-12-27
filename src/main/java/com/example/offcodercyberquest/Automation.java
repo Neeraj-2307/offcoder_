@@ -124,7 +124,7 @@ public class Automation {
 
         fout.write(ques.getBytes());
         fout.close();
-        fileName=".\\"+ User.getInstance().handle+"\\questions.txt";
+        fileName=".\\questions\\questions.txt";
         BufferedWriter out = new BufferedWriter(
                 new FileWriter(fileName, true));
 
@@ -145,7 +145,7 @@ public class Automation {
         FileOutputStream fout=new FileOutputStream(fileName);
         fout.write(ques.getBytes());
         fout.close();
-        fileName=".\\"+ User.getInstance().handle+"\\contests.txt";
+        fileName=".\\Contests\\contests.txt";
         BufferedWriter out = new BufferedWriter(
                 new FileWriter(fileName, true));
 
