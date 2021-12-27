@@ -55,8 +55,8 @@ public class DashboardController {
 
     @FXML
     void load_ide(ActionEvent event) throws IOException {
-        EditorController.contestId="1620";
-        EditorController.problemId="G";
+        EditorController.contestId="1610";
+        EditorController.problemId="F";
         HelloApplication m = new HelloApplication();
         m.changeScene("editor-view.fxml");
     }

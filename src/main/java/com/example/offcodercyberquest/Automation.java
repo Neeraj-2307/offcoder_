@@ -86,7 +86,7 @@ public class Automation {
         switch ( language){
             case JAVA -> langDrop.selectByValue("60");
             case JAVASCRIPT -> langDrop.selectByValue("34");
-            case CPP -> langDrop.selectByValue("51");
+            case CPP -> langDrop.selectByValue("50");
             case PYTHON -> langDrop.selectByValue("31");
         }
 
