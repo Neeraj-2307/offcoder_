@@ -17,13 +17,12 @@ from any one platform (codeforces, leetcode, etc) and be able to
 download it with its sample test case. (external libraries may be used
 for scraping as well as APIs.)
  </li>
-<li>Users can schedule a contest with a chosen problem or randomly selected problem.
+<li>Users can schedule a contest with a chosen problem or randomly selected contest.
  </li>
  <li>Users should be able to submit the code in various languages.</li>
-<li>The platform should be able to compile the code and display the verdict against the sample test case.</li>
+<li>The platform should be able to compile the code and display the output against any input.</li>
 <li>When the user is connected to the internet the platform on its own should be able to submit the user code and give the user a final verdict on its submission.</li>
 <li>Users should be able to make personalized lists for various questions that they have solved with solutions</li>
-<li> If an editorial is published it should be available to the user.</li>
 <li> The platform should have a history of submitted questions.</li>
 
 
@@ -33,15 +32,12 @@ for scraping as well as APIs.)
 <li>The external libraries used in the previous section should be replaced
 with your own scraper algorithm.</li>
 
-<li>Users must get their projected new rating and rank for the offline
-contest based on the concerned platform’s rating mechanism.</li>
 
 <li>The platform should have an elegant dashboard for statistics of user’s
 performance through graphs, pie charts, etc.</li>
 
-<li>The platform should have an automatic download feature for favorite
-topics selected previously. The download should happen in a periodic
-manner whenever connected to the Internet.</li>
+<li>The platform should have an  download feature for favorite
+topics selected . The download should happen in when connected to the Internet by user choice.</li>
 
 <li>The platform can suggest questions similar to the current question.</li>
 </ol>
@@ -51,7 +47,12 @@ manner whenever connected to the Internet.</li>
   <li>Ability to view and cancel Queued tasks.</li>
 <li>Default code.</li>
   </ol>
-
+  <p><h4 style="color:red">How to access</h4></p>
+<ol>
+  <li>git clone</li>
+<li>upgrade maven dependencies</li>
+  <li>run helloapplication</li>
+  </ol>
 
 ### tech stack
 <ul>
