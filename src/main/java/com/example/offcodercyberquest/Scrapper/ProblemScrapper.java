@@ -51,7 +51,9 @@ public class ProblemScrapper {
 
         StringBuilder problem= new StringBuilder();
 
-
+        for(Element e : s){
+            problem.append(e.html()).append("\n");
+        }
 
         p.setStatement(problem.toString());
 
@@ -93,9 +95,10 @@ public class ProblemScrapper {
                 "<body>";
 
                 String ques2=p.getTitle()+"\n"+p.getMemoryLimit()+"\n"+p.getTimeLimit()+"\n"+p.getStatement();
-
+        System.out.println(p.getStatement());
                  String ques3 = "</body>\n" +
                 "</html>";
+        System.out.println("in scrapper\n"+ques1+ques2+ques3);
                  return ques1+ques2+ques3;
     }
 }

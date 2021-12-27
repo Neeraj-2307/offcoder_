@@ -87,7 +87,7 @@ public class ContestEditorController implements Initializable {
     public void setQuestionView() {
         //TODO Fetch Question from file and display;
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(new File(".\\Contests\\1614.txt")));
+            BufferedReader reader = new BufferedReader(new FileReader(new File(".\\Contests\\"+contestId+".txt")));
             StringBuffer buffer = new StringBuffer();
             String x = "";
             while((x = reader.readLine()) != null){

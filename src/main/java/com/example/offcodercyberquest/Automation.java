@@ -129,7 +129,7 @@ public class Automation {
         String url=generateProblemURL(contestID,problemID);
         ProblemScrapper ps=new ProblemScrapper();
         String ques=ps.myScrapper(url,contestID,problemID);
-
+        System.out.println(ques);
         FileOutputStream fout=new FileOutputStream(fileName);
 
         fout.write(ques.getBytes());

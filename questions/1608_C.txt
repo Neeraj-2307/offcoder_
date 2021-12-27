@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background-color: #212121;
+    color: aliceblue;
+    text-align: center;
+}
+.title{
+    color: aquamarine;
+}
+.section-title{
+    color: aqua;
+}
+pre{
+text-align: left;
+}
+</style><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$$$','$$$']], displayMath: [['$$$$$$','$$$$$$']]}
+    });
+    MathJax.Hub.Register.StartupHook("End", function () {
+        Codeforces.runMathJaxListeners();
+    });
+    </script>
+    <script type="text/javascript" async
+            src="https://mathjax.codeforces.org/MathJax.js?config=TeX-AMS_HTML-full"
+    >
+    </script><title>Page Title</title>
+</head>
+<body>C. Game Master
+Input
+Output
+<div class="property-title">
+ memory limit per test
+</div>256 megabytes
+<div class="property-title">
+ time limit per test
+</div>1 second
+</body>
+</html>
