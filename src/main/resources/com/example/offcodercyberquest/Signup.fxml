@@ -57,7 +57,7 @@
                         <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
-                <TextField fx:id="email" layoutX="109.0" layoutY="246.0" promptText="Email" />
+                <TextField fx:id="email" editable="false" layoutX="109.0" layoutY="246.0" promptText="Email" text="a@gmail.com" />
             </children>
         </AnchorPane>
     </right>

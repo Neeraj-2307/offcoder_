@@ -39,7 +39,7 @@ import java.io.IOException;
 *
 * */
 
-public class HelloApplication extends Application {
+public class  HelloApplication extends Application {
     private static Stage stg;
     private Parent root;
     private Scene scene;

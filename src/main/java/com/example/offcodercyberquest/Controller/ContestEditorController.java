@@ -34,8 +34,8 @@ import java.util.concurrent.TimeUnit;
 *
 * */
 public class ContestEditorController implements Initializable {
-    String contestId;
-    int duration;
+    public static String contestId;
+    static int duration;
     @FXML
     void load_dashboard(ActionEvent event) throws IOException {
         HelloApplication m = new HelloApplication();
