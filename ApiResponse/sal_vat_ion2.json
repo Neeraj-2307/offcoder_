@@ -1,0 +1,153 @@
+[ {
+  "contestId" : 1474,
+  "contestName" : "Codeforces Round #696 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 11260,
+  "ratingUpdateTimeSeconds" : 1611074100,
+  "oldRating" : 0,
+  "newRating" : 385
+}, {
+  "contestId" : 1481,
+  "contestName" : "Codeforces Round #699 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 11009,
+  "ratingUpdateTimeSeconds" : 1612542900,
+  "oldRating" : 385,
+  "newRating" : 644
+}, {
+  "contestId" : 1485,
+  "contestName" : "Codeforces Round #701 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 6895,
+  "ratingUpdateTimeSeconds" : 1613148600,
+  "oldRating" : 644,
+  "newRating" : 784
+}, {
+  "contestId" : 1543,
+  "contestName" : "Codeforces Round #730 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 11425,
+  "ratingUpdateTimeSeconds" : 1625676600,
+  "oldRating" : 784,
+  "newRating" : 821
+}, {
+  "contestId" : 1546,
+  "contestName" : "Codeforces Round #732 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 8986,
+  "ratingUpdateTimeSeconds" : 1626021300,
+  "oldRating" : 821,
+  "newRating" : 879
+}, {
+  "contestId" : 1551,
+  "contestName" : "Codeforces Round #734 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 6679,
+  "ratingUpdateTimeSeconds" : 1627058100,
+  "oldRating" : 879,
+  "newRating" : 985
+}, {
+  "contestId" : 1557,
+  "contestName" : "Codeforces Round #737 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 7571,
+  "ratingUpdateTimeSeconds" : 1628526900,
+  "oldRating" : 985,
+  "newRating" : 1027
+}, {
+  "contestId" : 1560,
+  "contestName" : "Codeforces Round #739 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 3729,
+  "ratingUpdateTimeSeconds" : 1629305400,
+  "oldRating" : 1027,
+  "newRating" : 1115
+}, {
+  "contestId" : 1567,
+  "contestName" : "Codeforces Round #742 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 10994,
+  "ratingUpdateTimeSeconds" : 1630859700,
+  "oldRating" : 1115,
+  "newRating" : 1034
+}, {
+  "contestId" : 1602,
+  "contestName" : "Codeforces Round #751 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 4714,
+  "ratingUpdateTimeSeconds" : 1635150900,
+  "oldRating" : 1034,
+  "newRating" : 1011
+}, {
+  "contestId" : 1607,
+  "contestName" : "Codeforces Round #753 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 8655,
+  "ratingUpdateTimeSeconds" : 1635870900,
+  "oldRating" : 1011,
+  "newRating" : 981
+}, {
+  "contestId" : 1605,
+  "contestName" : "Codeforces Round #754 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 7035,
+  "ratingUpdateTimeSeconds" : 1636734900,
+  "oldRating" : 981,
+  "newRating" : 982
+}, {
+  "contestId" : 1610,
+  "contestName" : "Codeforces Global Round 17",
+  "handle" : "sal_vat_ion",
+  "rank" : 5213,
+  "ratingUpdateTimeSeconds" : 1637688900,
+  "oldRating" : 982,
+  "newRating" : 1037
+}, {
+  "contestId" : 1611,
+  "contestName" : "Codeforces Round #756 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 10697,
+  "ratingUpdateTimeSeconds" : 1637859000,
+  "oldRating" : 1037,
+  "newRating" : 967
+}, {
+  "contestId" : 1614,
+  "contestName" : "Codeforces Round #757 (Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 6863,
+  "ratingUpdateTimeSeconds" : 1637932500,
+  "oldRating" : 967,
+  "newRating" : 958
+}, {
+  "contestId" : 1613,
+  "contestName" : "Educational Codeforces Round 118 (Rated for Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 2698,
+  "ratingUpdateTimeSeconds" : 1638376500,
+  "oldRating" : 958,
+  "newRating" : 1116
+}, {
+  "contestId" : 1608,
+  "contestName" : "Codeforces Round #758 (Div.1 + Div. 2)",
+  "handle" : "sal_vat_ion",
+  "rank" : 5087,
+  "ratingUpdateTimeSeconds" : 1639224300,
+  "oldRating" : 1116,
+  "newRating" : 1111
+}, {
+  "contestId" : 1618,
+  "contestName" : "Codeforces Round #760 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 1885,
+  "ratingUpdateTimeSeconds" : 1639500600,
+  "oldRating" : 1111,
+  "newRating" : 1211
+}, {
+  "contestId" : 1619,
+  "contestName" : "Codeforces Round #762 (Div. 3)",
+  "handle" : "sal_vat_ion",
+  "rank" : 2277,
+  "ratingUpdateTimeSeconds" : 1640019000,
+  "oldRating" : 1211,
+  "newRating" : 1266
+} ]

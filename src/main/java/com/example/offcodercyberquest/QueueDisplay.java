@@ -8,12 +8,30 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
+/*
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * for testing purpose only
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * */
 public class QueueDisplay extends Application{
 	
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parent root=FXMLLoader.load((getClass().getResource("DisplayQueue.fxml")));
+		Parent root=FXMLLoader.load((getClass().getResource("ContestEditor.fxml")));
 		Scene scene=new Scene(root,Color.ALICEBLUE);
 		stage.setTitle("pending");
 		stage.setScene(scene);

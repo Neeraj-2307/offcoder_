@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="offcoderCyberquest" target="15" />
+      <module name="offcoderCyberquest" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>

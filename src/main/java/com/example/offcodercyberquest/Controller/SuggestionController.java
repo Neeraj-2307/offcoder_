@@ -1,13 +1,19 @@
 package com.example.offcodercyberquest.Controller;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import com.example.offcodercyberquest.ProblemScrapper;
-import com.example.offcodercyberquest.Suggestion;
+
+import com.example.offcodercyberquest.HelloApplication;
+import com.example.offcodercyberquest.Scrapper.ProblemScrapper;
+import com.example.offcodercyberquest.Beans.Suggestion;
+import com.example.offcodercyberquest.queue.DownloadTask;
+import com.example.offcodercyberquest.queue.TaskQueue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -23,9 +29,22 @@ public class SuggestionController implements Initializable{
     @FXML
     private Slider rating;
     @FXML
-    private Button suggest;
+    private Button suggest,download;
     @FXML
     private ListView<Suggestion> suggestionList;
+    @FXML
+    void newDownload() throws IOException {
+        String contestid= String.valueOf(suggestionList.getSelectionModel().getSelectedItem().getContestId());
+        String index=suggestionList.getSelectionModel().getSelectedItem().getIndex();
+        System.out.println(contestid+" "+index);
+        DownloadTask dt=new DownloadTask(contestid,index);
+        TaskQueue.getInstance().addTask(dt);
+    }
+    @FXML
+    void load_dashboard(ActionEvent event) throws IOException {
+        HelloApplication m = new HelloApplication();
+        m.changeScene("dashboard.fxml");
+    }
     List<String> tag;
     String url = "https://codeforces.com/api/problemset.problems?";
     public void graphchange() {
@@ -35,7 +54,7 @@ public class SuggestionController implements Initializable{
 
     public  void findSuggestion() throws Exception {
         suggestionList.getItems().clear();
-        System.out.print("abc");
+        System.out.print("Get contest starts");
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
         con.setRequestMethod("GET");
@@ -50,21 +69,20 @@ public class SuggestionController implements Initializable{
             response.append(inputLine);
         }
         in.close();
-       //System.out.println(response);
+       System.out.println(response);
        JSONObject obj1 = new JSONObject(response.toString());
        JSONObject problems=obj1.getJSONObject("result");
        JSONArray arr=problems.getJSONArray("problems");
-        for (int i = 0; i < Math.min(arr.length(),10); i++)
-        {
+        for (int i = 0; i < Math.min(arr.length(),15); i++){
             Suggestion s=new Suggestion();
             s.setContestId(arr.getJSONObject(i).getInt("contestId"));
             s.setName(arr.getJSONObject(i).getString("name"));
+            s.setIndex(arr.getJSONObject(i).getString("index"));
             if(arr.getJSONObject(i).has("rating"))
                 s.setRating(arr.getJSONObject(i).getInt("rating"));
             suggestionList.getItems().add(s);
         }
-       ProblemScrapper sc=new ProblemScrapper();
-       sc.myScrapper("https://codeforces.com/contest/1586/problem/A");
+
     }
 
     @Override
@@ -74,5 +92,4 @@ public class SuggestionController implements Initializable{
         rating.setMax(2500);
         rating.adjustValue(1200);
     }
-
 }

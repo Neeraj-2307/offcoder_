@@ -7,10 +7,20 @@ module com.example.offcodercyberquest {
     requires  org.json;
     requires neko.htmlunit;
     requires org.apache.httpcomponents.httpclient;
-    requires  htmlunit;
+
     requires org.jsoup;
+    requires java.logging;
+    requires org.controlsfx.controls;
+    requires org.seleniumhq.selenium.chrome_driver;
+    requires javafx.web;
+    requires org.seleniumhq.selenium.support;
     opens com.example.offcodercyberquest to javafx.fxml;
     exports com.example.offcodercyberquest;
     opens com.example.offcodercyberquest.Controller to javafx.fxml;
     exports com.example.offcodercyberquest.Controller;
+    exports com.example.offcodercyberquest.Beans;
+    opens com.example.offcodercyberquest.Beans to javafx.fxml;
+    exports com.example.offcodercyberquest.Scrapper;
+    opens com.example.offcodercyberquest.Scrapper to javafx.fxml;
+
 }

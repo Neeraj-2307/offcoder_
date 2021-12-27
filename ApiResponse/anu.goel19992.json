@@ -1,0 +1,33 @@
+[ {
+  "contestId" : 1481,
+  "contestName" : "Codeforces Round #699 (Div. 2)",
+  "handle" : "anu.goel1999",
+  "rank" : 12903,
+  "ratingUpdateTimeSeconds" : 1612542900,
+  "oldRating" : 0,
+  "newRating" : 357
+}, {
+  "contestId" : 1485,
+  "contestName" : "Codeforces Round #701 (Div. 2)",
+  "handle" : "anu.goel1999",
+  "rank" : 6895,
+  "ratingUpdateTimeSeconds" : 1613148600,
+  "oldRating" : 357,
+  "newRating" : 592
+}, {
+  "contestId" : 1499,
+  "contestName" : "Educational Codeforces Round 106 (Rated for Div. 2)",
+  "handle" : "anu.goel1999",
+  "rank" : 9386,
+  "ratingUpdateTimeSeconds" : 1616086200,
+  "oldRating" : 592,
+  "newRating" : 760
+}, {
+  "contestId" : 1535,
+  "contestName" : "Educational Codeforces Round 110 (Rated for Div. 2)",
+  "handle" : "anu.goel1999",
+  "rank" : 14584,
+  "ratingUpdateTimeSeconds" : 1622824500,
+  "oldRating" : 760,
+  "newRating" : 827
+} ]

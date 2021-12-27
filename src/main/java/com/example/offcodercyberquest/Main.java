@@ -10,11 +10,29 @@ import javafx.scene.paint.Color;
 
 import java.util.Objects;
 
-
+/*
+*
+*
+*
+*
+*
+*
+*
+* for testing purpose only
+*
+*
+*
+*
+*
+*
+*
+*
+*
+* */
 public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parent root=FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Suggestion.fxml"))));
+		Parent root=FXMLLoader.load((Objects.requireNonNull(getClass().getResource("Question.fxml"))));
 		Scene scene=new Scene(root,Color.ALICEBLUE);
 		stage.setTitle("pending");
 		stage.setScene(scene);

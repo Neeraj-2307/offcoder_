@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="743.0" style="-fx-background-color: #15202B;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.offcodercyberquest.Controller.createListController">
+   <children>
+      <Button layoutX="437.0" layoutY="28.0" mnemonicParsing="false" onAction="#addnew" text="create new list" />
+      <TextField fx:id="name" layoutX="217.0" layoutY="28.0" prefHeight="25.0" prefWidth="193.0" promptText="new list title" />
+      <ListView fx:id="list" layoutX="87.0" layoutY="156.0" prefHeight="316.0" prefWidth="226.0" />
+      <ListView fx:id="question" layoutX="372.0" layoutY="156.0" prefHeight="316.0" prefWidth="337.0" />
+      <Text fill="#f7f3f3" layoutX="128.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already createdlist" textAlignment="CENTER" wrappingWidth="143.4339599609375">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Text fill="#f7f3f3" layoutX="438.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of questions" textAlignment="CENTER" wrappingWidth="181.033935546875">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <Button layoutX="657.0" layoutY="16.0" mnemonicParsing="false" onAction="#backTo" style="-fx-background-color: #f20000;" text="back" textFill="#fcf4f4" />
+      <Button layoutX="681.0" layoutY="124.0" mnemonicParsing="false" onAction="#addquestion" prefHeight="25.0" prefWidth="28.0" style="-fx-background-color: #08f21c;" text="+" textFill="#f4f4f4" />
+      <Text fx:id="result" fill="#f7f7f7" layoutX="140.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="489.33680725097656">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
