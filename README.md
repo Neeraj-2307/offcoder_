@@ -80,8 +80,17 @@ https://lucid.app/lucidchart/9417a0ae-aa7c-4ce8-8b2c-55fb5dba155e/edit?invitatio
 ## screenshots
 
   <p align="center">
-    <img width="460" height="300" src="1.jpeg">
+   
     <img width="460" height="300" src="2.jpeg">
+    <img width="460" height="300" src="Capture.jpeg">
+    <img width="460" height="300" src="Capture1.jpeg">
+    <img width="460" height="300" src="Capture2.jpeg">
+    <img width="460" height="300" src="Capture3.jpeg">
+    <img width="460" height="300" src="Capture4.jpeg">
+    <img width="460" height="300" src="Capture5.jpeg">
+    <img width="460" height="300" src="Capture6.jpeg">
+    <img width="460" height="300" src="Capture8.jpeg">
+    
   </p>
 
 ## Authors
