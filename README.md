@@ -1,5 +1,5 @@
 <p>
-  <img width="460" height="300" src="OFFCODER.png">
+  <img width="460" height="300" src="OFFCODER (1).png">
   <img width="460" height="300" src="offcoder.jpg">
 </p>
 
