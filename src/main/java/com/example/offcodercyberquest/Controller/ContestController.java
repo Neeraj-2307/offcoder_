@@ -99,7 +99,7 @@ public class ContestController implements Initializable {
     
     private void setAlreadyContests() throws IOException {
         String dirName= User.getInstance().handle;
-        String url=".\\"+dirName+"\\contests.txt";
+        String url=".\\Contests\\contests.txt";
         downloadedQuestion.getItems().clear();
         File f=new File(url);
         BufferedReader br= null;

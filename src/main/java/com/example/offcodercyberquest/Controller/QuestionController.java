@@ -62,7 +62,7 @@ public class QuestionController implements Initializable {
 
     private void setMainList() throws IOException {
         String dirName= User.getInstance().handle;
-        String url=".\\neeraj_2307\\questions.txt";
+        String url=".\\questions\\questions.txt";
         System.out.println(url);
         File f=new File(url);
         BufferedReader br= null;
