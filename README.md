@@ -59,8 +59,9 @@ topics selected . The download should happen in when connected to the Internet b
 
  <li>Front End:- JavaFX</li>
 <li>Backend :- JAVA</li>
-<li>Libraries going to use:-  .Jsoup, Jackson</li>
+<li>Libraries going to use:-  Jsoup, Jackson,Selenium</li>
 <li>Tools used:-  IntelliJ, GitHub, SceneBuilder, maven</li>
+  <li>Api used: CodeforcesAPI.</li>
 </ul>
 
 
