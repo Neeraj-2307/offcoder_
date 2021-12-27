@@ -1,8 +1,10 @@
-<p align="center">
+<p>
+  <img width="460" height="300" src="OFFCODER.png">
   <img width="460" height="300" src="offcoder.jpg">
 </p>
 
 # Offcoder
+YOUTUBE LINK: https://youtu.be/ujDRwxm4paM
 
 an alternative to an online coding platform, which will help those who don't have a good internet connection. A platform in which one can download
 questions, set up contests, submit answers and later on when connected to the internet can see the final result.
