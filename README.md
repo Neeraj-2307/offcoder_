@@ -92,5 +92,5 @@ https://embed.creately.com/CyiN5sireEK?type=svg
 ## Authors
 
 [@mokshKori](https://github.com/mokshkori)<br>
-[@neerajJoshi](https://github.com/neeraj_2307)<br>
+[@neerajJoshi](https://github.com/neeraj-2307)<br>
 [@AnubhavGoel](https://github.com/AnubhavGoel2808)
